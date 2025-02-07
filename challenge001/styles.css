@@ -16,6 +16,7 @@ body{
     height: 100vh;
     color:white ;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 h1{
     margin-bottom: 2rem ;
@@ -31,15 +32,16 @@ h1{
     justify-content: space-evenly;
     height: 80%;
     width: 90%;
-    overflow-y: scroll;
+   
 }
 #logo_huddle img{
  max-width: 15rem;
-
+ width: 10rem;
  height: 2.5rem;
   margin:1rem 0 1rem 1rem ;
 }
 .Container p{
+   
 line-height: 1.5em;
 width: 97%;
 margin-bottom: 3rem;
@@ -87,4 +89,26 @@ font-size: clamp(1rem, 0.873rem + 0.627vw, 1.5rem);
     background-color: var(--violet);
     padding: 15px;
     transition: .3s ease-in-out;
+}
+
+@media screen and (min-width:950px) and (max-width:1900px){
+    .Container {
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
+     width: 90%;
+    }
+    body{
+        background: url(./images/bg-desktop.svg) var(--violet);
+      
+    }
+    .Container .description {
+       width: 30%;
+       text-align: left;
+       
+    }
+    .Container img{
+        width: 60%;
+    }
+
 }
