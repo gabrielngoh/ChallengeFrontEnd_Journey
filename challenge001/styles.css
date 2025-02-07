@@ -110,5 +110,7 @@ font-size: clamp(1rem, 0.873rem + 0.627vw, 1.5rem);
     .Container img{
         width: 60%;
     }
-
+   .icones {
+   
+   }
 }
