@@ -28,6 +28,7 @@ body{
     border: 1px solid black;
     margin: 10% auto  ;
     background-color: var(--card-BG);
+    box-shadow: rgba(0, 0, 0, 0.856) 1px 1px 20px , rgb(49, 48, 48) 1px 1px 23px   ;
 }
 
 .contain{
