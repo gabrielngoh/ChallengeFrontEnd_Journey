@@ -5,7 +5,6 @@
 .DS_Store
 .prettierignore
 *.txt
-images
 README-template.md
 style-guide.md
 Font
