@@ -1,0 +1,95 @@
+/*Reset CSS*/
+*, ::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('../Font/static/RedHatDisplay-Black.ttf');
+/*CSS Variables color*/
+:root
+{
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very_pale_blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+/*General Styling*/
+body
+{
+    font-family: "Red Hat Display", sans-serif;
+    height: 50vh;
+    background: var(--Pale-blue);
+    
+}
+.card , button[type="submit"] , .annual{
+    border-radius: .7rem;
+}
+h2,h4{
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+/*Card Styling*/
+.card
+{
+    height: 34rem;
+    width: clamp(18.5rem,20rem,22.5rem);
+    margin: 5% auto;
+    overflow: hidden;
+    display: flex;
+    flex-flow:column nowrap;
+    background: white;
+    align-items: center;
+    text-align: center;
+    color: var(--Desaturated-blue);
+    box-shadow: rgb(101, 102, 103) 0 .9rem .9rem;
+}
+.card>*:nth-child(n+2){
+    width: 90%;
+    margin: .5em 0;
+}
+.card>:nth-child(2){
+    margin-top:2rem;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+
+/*Annual part styling*/
+.annual{
+    padding: 1em;
+    background-color: var(--Very_pale_blue);
+    border-radius: 5%;
+    display: grid;
+    grid-template-columns: 20% 50% 20%;
+    gap: 1em;
+    place-items: center;
+    font-size: 15px;
+    text-align: justify;
+}
+a{
+    font-weight: 600;
+    color: var(--Bright-blue);
+}
+
+/*Styling button Part*/
+button{
+    margin:.5em 0 ;
+    border: none;
+    outline:none;
+    font-weight:800;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+}
+button[type="submit"]{
+    background: var(--Bright-blue);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: var(--Pale-blue) 1px 20px 25px ;
+}
+button[type="reset"]{
+    color:var(--Desaturated-blue);
+}
