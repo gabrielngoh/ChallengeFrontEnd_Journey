@@ -71,6 +71,10 @@ h2,h4{
 a{
     font-weight: 600;
     color: var(--Bright-blue);
+    transition: 3ms ease-in-out;
+}
+a:hover{
+    text-decoration: none;
 }
 
 /*Styling button Part*/
@@ -89,7 +93,17 @@ button[type="submit"]{
     color: white;
     padding: 1rem 0;
     box-shadow: var(--Pale-blue) 1px 20px 25px ;
+    transition: 3ms ease-in;
+}
+button[type="submit"]:hover{
+    opacity: .5;
+    cursor: pointer;
 }
 button[type="reset"]{
     color:var(--Desaturated-blue);
+    transition: 3ms ease-in-out;
+}
+button[type="reset"]:hover{
+    color: var(--Dark-blue);
+    cursor: pointer;
 }
