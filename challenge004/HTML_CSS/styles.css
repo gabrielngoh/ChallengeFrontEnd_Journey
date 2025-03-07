@@ -39,7 +39,7 @@ h2,h4{
 {   
     height: clamp(35rem,60%,36rem);
     width: clamp(18.5rem,50%,22.5rem);
-    margin: 20% auto;
+    margin: 6.25rem auto 0 auto;
     overflow: hidden;
     display: flex;
     flex-flow:column nowrap;
