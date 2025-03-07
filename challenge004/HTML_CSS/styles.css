@@ -4,7 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/*Importing Font-family RedHatDisplay*/
 @import url('../Font/static/RedHatDisplay-Black.ttf');
+
 /*CSS Variables color*/
 :root
 {
@@ -14,12 +17,13 @@
     --Desaturated-blue: hsl(224, 23%, 55%);
     --Dark-blue: hsl(223, 47%, 23%);
 }
+
 /*General Styling*/
 body
 {
     font-family: "Red Hat Display", sans-serif;
-    height: 50vh;
-    background: var(--Pale-blue);
+    height: 80vh;
+    background: url('./images/pattern-background-desktop.svg') var(--Pale-blue) no-repeat;
     
 }
 .card , button[type="submit"] , .annual{
@@ -29,12 +33,13 @@ h2,h4{
     color: var(--Dark-blue);
     font-weight: 900;
 }
+
 /*Card Styling*/
 .card
-{
-    height: 34rem;
-    width: clamp(18.5rem,20rem,22.5rem);
-    margin: 5% auto;
+{   
+    height: clamp(35rem,60%,36rem);
+    width: clamp(18.5rem,50%,22.5rem);
+    margin: 20% auto;
     overflow: hidden;
     display: flex;
     flex-flow:column nowrap;
@@ -45,7 +50,7 @@ h2,h4{
     box-shadow: rgb(101, 102, 103) 0 .9rem .9rem;
 }
 .card>*:nth-child(n+2){
-    width: 90%;
+    width: 77%;
     margin: .5em 0;
 }
 .card>:nth-child(2){
@@ -68,6 +73,9 @@ h2,h4{
     font-size: 15px;
     text-align: justify;
 }
+.annual>:nth-child(2){
+    justify-self: start;
+}
 a{
     font-weight: 600;
     color: var(--Bright-blue);
@@ -83,6 +91,10 @@ button{
     border: none;
     outline:none;
     font-weight:800;
+    cursor: pointer;
+    transition: 3ms ease-in-out;
+
+
 }
 .button{
     display: flex;
@@ -93,17 +105,16 @@ button[type="submit"]{
     color: white;
     padding: 1rem 0;
     box-shadow: var(--Pale-blue) 1px 20px 25px ;
-    transition: 3ms ease-in;
 }
 button[type="submit"]:hover{
     opacity: .5;
-    cursor: pointer;
 }
 button[type="reset"]{
     color:var(--Desaturated-blue);
-    transition: 3ms ease-in-out;
+    background: transparent;
 }
 button[type="reset"]:hover{
     color: var(--Dark-blue);
-    cursor: pointer;
 }
+
+/*END . . .*/
