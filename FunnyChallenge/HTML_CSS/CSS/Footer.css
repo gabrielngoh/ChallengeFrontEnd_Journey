@@ -1,0 +1,59 @@
+footer{
+    height: fit-content;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    padding: 15rem 0 15rem 2em;
+    line-height: 3rem;
+    gap: 2rem;
+    color: white;
+    background-color: hsl(216, 53%, 9%);
+}
+footer p{
+    line-height: normal;
+}
+.Local , address{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1em;
+}  
+address img{
+    align-self: center;
+}
+.Contact{
+    width: fit-content;
+}
+footer .icons{
+    display: flex;
+    justify-content: center;
+    gap:0 2rem;
+    
+}
+.icons>*{
+    font-size: clamp(1.5rem,1vh,2rem);
+   
+    border-radius: 50%;
+    text-align: center;
+}
+.icons i:hover{
+    background: -webkit-linear-gradient();
+    background: linear-gradient(to right,cyan, rgba(0, 255, 255, 0.621) 50%,rgba(0, 255, 255, 0.399) 51%);
+    border-color: transparent;
+}
+@media screen and (width>=768px){
+    .link-zone>*{
+        width: 25%;
+    }
+    .link-zone, .Links ul{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .link-zone img{
+        width: 1em;
+        height: 1em;
+        vertical-align: middle;
+    }
+    
+}

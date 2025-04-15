@@ -1,0 +1,39 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    height: 25vh;
+    align-items: center;
+    padding:0 1rem;
+    background: var(--Intro_Email_bg);
+}
+header img{
+    height: 20%;
+}
+nav{
+    width:50%;
+}
+/*Supprimer Ul et ses li ... Ceci plomble le travail*/
+nav>ul {
+   
+    height:5rem ;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    padding: .5rem auto;
+    font-size: min(90%,5rem);
+    opacity: .7;
+}
+nav li{
+    width: max-content;
+    white-space: nowrap;
+}
+
+nav a:hover{
+    font-weight: 600;
+    text-decoration: underline;
+    color:white;
+    opacity: 1;
+    cursor: pointer;
+}
