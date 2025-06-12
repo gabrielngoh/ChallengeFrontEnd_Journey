@@ -1,0 +1,15 @@
+@font-face {
+    font-family:EpilogueN;
+    src: url('./Fonts/static/Epilogue-Regular.ttf');
+}
+@font-face {
+    font-family:EpilogueBold;
+    src: url(./Fonts/static/Epilogue-Bold.ttf);
+}
+:root{
+--AlmostWhite: hsl(0, 0%, 98%);
+--MediumGray: hsl(0, 0%, 41%);
+--AlmostBlack: hsl(0, 0%, 8%);
+--EpilogueNormal:EpilogueN;
+--EpilogueBold:EpilogueBold;
+}
