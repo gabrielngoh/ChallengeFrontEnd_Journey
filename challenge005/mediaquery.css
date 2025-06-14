@@ -1,27 +1,82 @@
 @media screen and (max-width:900px){
+    body{
+        overflow-y: auto;
+        
+    }
+    #header{
+        position: relative;
+      
+
+    }
    nav, .Log-reg-btn{
         display: none;
+    }
+    #header nav{
+        position: absolute;
+        display: flex;
+        width: 65%;
+        height: 100vh;
+        flex-direction: column;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        gap: 2rem;
+    }
+     .Log-reg-btn{
+        
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        position:absolute;
+        right: 2.5%;
+        bottom: -400%;
+     }
+     .Log-reg-btn>button{
+        width: 60vw;
+     }
+    
+     #nav-bar>img{
+        display: block;
+        width: 10%;
+        align-self: end;
+        margin: 10%;
+
     }
     header #Burger_icon{
         display: block;
     }
     section{
+        height: fit-content;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
+        gap: 2rem;
     }
     section div{
         width: 100%;
     }
-    
-    .leftside{
-        order: 2;
+    main{
+        align-items: center;
+        text-align: center;
     }
-    /*Gerer la specifite des selecteurs plus tard*/
-    section .image-profile:first-child{
+    br{
         display: none;
     }
+    .leftside{
+        order: 2;
+        align-items: center;
+    }
+    /*Gerer la specifite des selecteurs plus tard*/
+    
     section .img-profile img:last-child{
         display: block;
+    }
+    section #Desk{
+        display: none;
+    }
+    section .leftside button{
+        background-color: var(--AlmostBlack);
+        color: #fff;
+        
     }
 }
