@@ -47,24 +47,37 @@ header{
 }
 #nav-bar{
     width: 90%;
+    display: flex;
+    justify-content: space-between;
 }
-#nav-bar a{
+.nav-link{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.rotata_attribute{
+    transform: rotate(180deg);
+}
+#nav-bar div ul a, #nav-bar div a{
     position: relative;
-    margin-inline: 5%;
+    margin-inline:5%;
     color:var(--MediumGray);
     text-decoration: none;
     transition: all 1s ease 3ms;
-    
 }
-#nav-bar .row::after{
-  content: url(./images/icon-arrow-down.svg);
-  margin-inline: .4em;
-  position: absolute;
-  bottom: 5%;
-  transform: translatey(-5%);
+#nav-bar div {
+    width: 100%;
+}
+ ul{
+    display: none;
+}
+#nav-bar ul li{
+    list-style-type: none;
+     margin-left: 2rem;
 }
 
-#nav-bar a:hover, button:hover{
+
+#nav-bar div>a:hover, button:hover{
     color: var(--AlmostBlack);
     font-family: var(--EpilogueBold);
 }
@@ -84,6 +97,10 @@ header{
     border: 2px solid ;
     border-radius: .7rem;
     padding: .7em;
+}
+.Log-reg-btn{
+    display: flex;
+    justify-content: flex-end;
 }
 
 /*Main Styling*/
@@ -111,6 +128,12 @@ main{
     padding-inline: 1em;
     
 }
+.about__{
+
+    display: flex;
+    gap: 2em;
+}
+
 main h1{
     font-size: clamp(2rem,4vh,5rem);
     margin-top: 15%;
@@ -126,7 +149,5 @@ section .partner-logo{
     gap: 5%;
 }
 section .partner-logo>*{
-    width:10%;
-    min-width: 75px;
-    max-width: 114px; 
+    width: clamp(75px,10%,114px);
 }

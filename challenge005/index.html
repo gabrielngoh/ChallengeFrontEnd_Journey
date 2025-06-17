@@ -7,27 +7,47 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
- 
 </head>
 <body>
 
   <header id="header">
-    <div id="Logo-nav">
+    
     <img src="./images/logo.svg" alt="snap-Logo" >
+   
     <nav id="nav-bar">
       <img class="close-img" src="./images/icon-close-menu.svg" alt="close-btn">
-      <a href="#" class="row">Features</a>
-      <a href="#" class="row">Company</a>
-      <a href="#">Careers</a>
-      <a href="#">About</a>
+      <div class="nav-link">
+        <div class="features">
+          <a href="#" class="row">Features<img src="./images/icon-arrow-down.svg" class="arrow__" alt="arrow_down"></a>
+          <ul>
+            <li><img src="images/icon-todo.svg" alt="icons"><a href="#">To-do List</a></li>
+            <li><img src="images/icon-calendar.svg" alt="icons"><a href="#">Calendar</a></li>
+            <li><img src="images/icon-reminders.svg" alt="icons"><a href="#">Reminders</a></li>
+            <li><img src="images/icon-planning.svg" alt="icons"><a href="#">Planning</a></li>
+          </ul>
+        </div>
+        <div class="company">
+          <a href="#" class="row">Company <img src="./images/icon-arrow-down.svg" class="arrow__cmp" alt="arrow_icon"></a>
+           <ul>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Our team</a></li>
+            <li><a href="#">Blog</a></li>
+           </ul>
+        </div>
+      <div class="about__" >
+          <a href="#">Careers</a>
+          <a href="#">About</a>
+      </div>
+        
+      </div>
+        
+      <div class="Log-reg-btn">
+        <button>Login</button>
+        <button> Register</button>
+      </div>
     </nav>
-    </div>
-    <div class="Log-reg-btn">
-      <button>Login</button>
-      <button> Register</button>
-    </div>
     <img id="Burger_icon" src="./images/icon-menu.svg" alt="burger_icon">
+
   </header>
   <section>
     <div class="leftside">
@@ -52,6 +72,7 @@
     <img src="./images/image-hero-mobile.png" alt="img-hero-mobile"> 
   </div>
   </section>
+  
 <script src="app.js"></script>
 </body>
 </html>
