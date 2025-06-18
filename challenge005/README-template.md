@@ -28,17 +28,16 @@ Users should be able to:
 
 ### Screenshots
 
-![](./ScreenShot/MY_OWN_Desktop_version.png.jpg)
 
-![](./ScreenShot/MY_OWN_mobile_version.png.jpg)
+![](./ScreenShot/MY_OWN_Desktop_version.png)
 
 ---
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+
+- Live Site URL: [solution URL](https://challenge-front-end-journey.vercel.app/)
 
 ## My process
 
@@ -75,9 +74,5 @@ It was really good challenge and i also learned how to :
 ```
 ### Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
+- Frontend Mentor - [gabriengoh](https://www.frontendmentor.io/profile/gabrielngoh)
+- LinkdeIn - [GabrielNgoh](https://www.linkedin.com/in/gabriel-pierre-ngoh-dooh-03aab6309/)
