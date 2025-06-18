@@ -71,7 +71,6 @@ It was really good challenge and i also learned how to :
      }
   })
 
-```
 ### Author
 
 - Frontend Mentor - [gabriengoh](https://www.frontendmentor.io/profile/gabrielngoh)
