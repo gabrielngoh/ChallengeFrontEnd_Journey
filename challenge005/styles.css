@@ -65,12 +65,13 @@ header{
     text-decoration: none;
     transition: all 1s ease 3ms;
 }
+
 #nav-bar div {
     width: 100%;
 }
- ul{
+ .features ul , .company ul {
     display: none;
-}
+ }
 #nav-bar ul li{
     list-style-type: none;
      margin-left: 2rem;

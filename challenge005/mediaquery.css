@@ -1,3 +1,6 @@
+/*
+*** Breakpoint for screen under 900px 
+*/
 @media screen and (max-width:900px)
 {
     body{
@@ -12,26 +15,27 @@
         width: 65%;
         height: 100vh;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: start;
         align-items: center;
-        gap: 15%;
         right: 0;
         top: 0;
         background-color: #fff;
         display: none;
-        
+
     }
     
+    
     #header #nav-bar>*:not(img){
-        height: 30%;
+        flex-basis: 17%;
+
     }
     #nav-bar .nav-link{
         flex-direction: column;
         gap: 10%;
     }
     
-    #nav-bar .nav-link ul {
-        padding-block: 1em;
+    #nav-bar .nav-link ul>*{
+        margin-block: 1rem;
     }
 
     #nav-bar .Log-reg-btn{
@@ -76,10 +80,6 @@
         order: 2;
         align-items: center;
     }
-    .display{
-        display: block;
-    }
-    /*Gerer la specifite des selecteurs plus tard*/
     
     section .img-profile img:last-child{
         display: block;
@@ -91,5 +91,26 @@
         background-color: var(--AlmostBlack);
         color: #fff;
         
+    }
+}
+
+/*
+*** Break-point for screen over 900px
+*/
+@media screen and (min-width:901px)
+{
+    .features ul, .company ul{
+        width: 15%;
+        padding-block: 1.5rem;
+        border-radius: .5rem;
+        border: transparent;
+        box-shadow: rgb(177, 176, 176) 1px 1px 1rem ;
+        position:absolute;
+        transform: translateY(7.5%);
+        background: white;
+        
+    }
+    .features ul li , .company ul li  {
+        margin: 1rem auto ;
     }
 }
