@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.slide{
+    transform: translateX(calc(2 * 50%))
+}
+.Card_Design_white{
+    @apply flex flex-col text-center justify-center items-center gap-[5%] font-Montserrat font-semibold text-dark_grayish_Blue bg-white 
+}
+.Card_Design_violet{
+    @apply flex flex-col text-center justify-center items-center gap-[5%] font-Montserrat font-semibold  text-white  
+}
+
+.Price{
+    @apply block  text-5xl
+}
+ul{
+    @apply w-3/4
+}
+li {
+    @apply border-y-[.5px] w-full py-4
+}
+.btn_style_component{
+    @apply w-3/4 text-white py-2 rounded-md bg-gradient-to-r  from-Gradient_from_left to-gradient_to_right
+}
+.btn_style_component_Professional{
+    @apply w-3/4 text-grayish_Blue py-2 rounded-md  bg-white
+}
