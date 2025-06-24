@@ -4,6 +4,7 @@
 .slide{
     transform: translateX(calc(2 * 50%))
 }
+
 .Card_Design_white{
     @apply flex flex-col text-center justify-center items-center gap-[5%] font-Montserrat font-semibold text-dark_grayish_Blue bg-white 
 }
