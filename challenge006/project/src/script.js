@@ -25,34 +25,16 @@ switch_btn.addEventListener('click',()=>
 {   
     switch_btn_cicrcle.classList.toggle('slide')
     price_Monthly_Array.forEach((element,index)=>{
-    if(switch_btn_cicrcle.classList.contains('slide'))
-     {
-        element.innerHTML=DisplayNewPrice(index)
-     }
-    else
-     {
-        element.innerHTML=DisplayPreviousPrice(index)
-     }
-                                                 })
+    switch_btn_cicrcle.classList.contains('slide')? element.innerHTML= DisplayPrices(MAJData,index) : element.innerHTML= DisplayPrices(Previous_Data,index)                                              })
 })
 
-// Trash Code ... I was a little bit tired but it looks easy too understand
-const DisplayPreviousPrice = (index)=>{
-    return (` 
+//Arrow function to display result
+const DisplayPrices = (PriceArray,index)=>{
+   return (` 
     <header id="pro">
       <h2>
-        <span>${Previous_Data[index].Type}</span>
-        <span class="Price">&dollar;${Previous_Data[index].prix}</span>
-      </h2>
-    </header>
-    `)
-}
-const DisplayNewPrice= (index)=>{
-    return (` 
-    <header id="pro">
-      <h2>
-        <span>${MAJData[index].Type}</span>
-        <span class="Price">&dollar;${MAJData[index].prix}</span>
+        <span>${PriceArray[index].Type}</span>
+        <span class="Price">&dollar;${PriceArray[index].prix}</span>
       </h2>
     </header>
     `)

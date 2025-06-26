@@ -12,9 +12,7 @@ module.exports = {
        "dark_grayish_Blue":"hsl(232, 13%, 33%)",
      
       },
-      fontSize:{
-        "bodyFont":"15px"
-      },
+       
       fontFamily:
       {
         "Montserrat":"Montserrat , sans-serif"
