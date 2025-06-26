@@ -21,6 +21,7 @@ const MAJData = [
 
 
 // Event Listener  
+
 switch_btn.addEventListener('click',()=>
 {   
     switch_btn_cicrcle.classList.toggle('slide')
@@ -29,6 +30,7 @@ switch_btn.addEventListener('click',()=>
 })
 
 //Arrow function to display result
+
 const DisplayPrices = (PriceArray,index)=>{
    return (` 
     <header id="pro">

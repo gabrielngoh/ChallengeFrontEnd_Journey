@@ -6,10 +6,10 @@
 }
 
 .Card_Design_white{
-    @apply flex flex-col text-center justify-center items-center gap-[5%] font-Montserrat font-semibold text-dark_grayish_Blue bg-white 
+    @apply flex flex-col text-center justify-center py-5 items-center gap-[5%] font-Montserrat font-semibold text-dark_grayish_Blue bg-white 
 }
 .Card_Design_violet{
-    @apply flex flex-col text-center justify-center items-center gap-[5%] font-Montserrat font-semibold  text-white  
+    @apply flex flex-col text-center justify-center py-5 items-center gap-[5%] font-Montserrat font-semibold  text-white  
 }
 
 .Price{
