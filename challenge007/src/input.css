@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+@font-face {
+    font-family: Red__;
+    src: url(../assets/fonts/static/RedHatText-Regular.ttf);
+}
+.Card_dessert {
+    @apply  w-[90%] rounded-xl overflow-hidden shadow-md max-w-xs md:h-full py-4
+}
+.Add_to_cart_btn{
+    @apply absolute top-[60%] -translate-x-1/2 left-1/2 flex justify-center py-2 w-1/2 rounded-3xl shadow-lg bg-white  text-nowrap lg:w-3/4 sm:top-1/2 
+}
+.overlay {
+        @apply absolute top-[60%] -translate-x-1/2 left-1/2 hidden py-2 w-1/2 rounded-3xl shadow-lg   text-nowrap lg:w-3/4 sm:top-1/2 bg-MyRed 
+    
+}
+.overlay_state 
+{
+    @apply flex justify-evenly items-center
+}
+.Quantity {
+    @apply text-MyRose50
+}
+.Add_to_cart_btn>img{
+    @apply mr-[3%]
+}
+
+.Card_dessert>img {
+    @apply sm:h-[60%] w-[90%] mx-auto rounded-xl
+}
