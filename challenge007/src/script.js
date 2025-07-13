@@ -45,7 +45,7 @@ minus_array.forEach((minus_image,index_img)=>{
   product__add_preview(index_img,parseFloat(span.textContent))
 
   })
-  
+    
 })
 // arrow function to determine btn nature (plus or minus) and update count
 const is_plus_or_minus =(incre_decre_btn,span)=>{
@@ -63,7 +63,7 @@ const increment__=(overlay__span)=>{
 }
 const decrement__=(overlay__span)=>{
   let old__quantity = parseInt(overlay__span.textContent)
-  if(old__quantity==0){
+  if(old__quantity==1){
     console.log('restart ...')
     restart()
   }
@@ -79,7 +79,6 @@ const restart =()=>{
   })
 
 }
-
 
 /**
  * AJOUTER UN ITEMS DANS LA SIde bar :
@@ -141,10 +140,11 @@ var ITEMS =[
 ]
 var Is_items__add = []
 
-const product__add_preview = (index,product_qte)=>{
- 
+const product__add_preview = (index,product_qte)=>
+{
   is__product_in_list(index,product_qte)
 }
+
 const is__product_in_list =(index,prod)=>{
 if(!Is_items__add.includes(index)){
   var div = document.createElement('div')
@@ -153,7 +153,6 @@ if(!Is_items__add.includes(index)){
   div.innerHTML=return_prod_added_info(ITEMS,prod,index)
   Aside__orderList.appendChild(div)
   add_newprod_info_to_ITEMS(index,div)
-
 }
 
 else{
@@ -165,13 +164,18 @@ const add_newprod_info_to_ITEMS=(prod_index,prod_info)=>{
     aside_img_text.style.display='none'
 
 }
+const remove_items=(indexItems)=>{
+  
+  
+
+}
 const return_prod_added_info=(ProductList, orderprod_num,index)=>{
-  return ("<h1>"+ProductList[index].name+`</h1> <div class="product"+${index}">
-  <span>* ${orderprod_num} </span>
-  <span class="actual_price">${ProductList[index].price}</span>
-  <span class="calculate_price">${ProductList[index].price * orderprod_num}</span></div>`)
+  return ("<div><h1 class=\"font-semibold\">"+ProductList[index].name+`</h1><div class="product"+${index}">
+  <span class=" text-MyRed">${orderprod_num}x</span>
+  <span class="actual_price  pl-[7.5%] text-gray-500 ">@${ProductList[index].price}&dollar;</span>
+  <span class="calculate_price pl-[7.5%] text-gray-700 font-semibold">${ProductList[index].price * orderprod_num}&dollar;</span></div></div> <img src="../assets/images/icon-remove-item.svg" class=\"bg-blue-500 rounded-xl h-[20px]\">`)
 }
 // JE dois gerer le fait que si la liste des produits affichee est vide 
 //oon revient a l'image de depart 
 //mettre a jour la fonction restart() pour cela et implementer d'autres fonctions
-//ENfin gerer le style des produits dans la liste
+//ENfin gerer le style des produits dans la li
