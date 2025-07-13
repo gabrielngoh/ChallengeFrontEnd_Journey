@@ -30,3 +30,6 @@
 .Card_dessert>img {
     @apply sm:h-[60%] w-[90%] mx-auto rounded-xl
 }
+.showed_prod{
+    @apply flex justify-evenly
+}

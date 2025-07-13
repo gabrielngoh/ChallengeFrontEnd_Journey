@@ -16,6 +16,7 @@ const plus_array = document.querySelectorAll('.Card1 .add_items,.Card2 .add_item
 const minus_array = document.querySelectorAll('.Card1 .remove,.Card2 .remove, .Card3 .remove, .Card4 .remove, .Card5 .remove,.Card6 .remove,.Card7 .remove,.Card8 .remove,.Card9 .remove')
 const order_quantity = document.querySelectorAll('.Card1 .Quantity,.Card2 .Quantity, .Card3 .Quantity, .Card4 .Quantity, .Card5 .Quantity,.Card6 .Quantity,.Card7 .Quantity,.Card8 .Quantity,.Card9 .Quantity')
 const Aside__orderList= document.querySelector('aside')
+const aside_img_text=document.querySelector('#aside_img_emptyProdPara')
 var order=1
 
 /**Afficher un overlay (done )
@@ -30,16 +31,19 @@ btn.forEach((button,index_btn)=>{
   })
 })
 plus_array.forEach((plus_image,index_img)=>{
-  let span = Array.from(order_quantity)[index_img]
-  plus_image.addEventListener('click',()=>{
+   let span = Array.from(order_quantity)[index_img]
+   plus_image.addEventListener('click',()=>{
     is_plus_or_minus(plus_image,span)
+    product__add_preview(index_img,parseFloat(span.textContent))
   })
   
 })
 minus_array.forEach((minus_image,index_img)=>{
   let span = Array.from(order_quantity)[index_img]
   minus_image.addEventListener('click',()=>{
-    is_plus_or_minus(minus_image,span)
+  is_plus_or_minus(minus_image,span)
+  product__add_preview(index_img,parseFloat(span.textContent))
+
   })
   
 })
@@ -72,8 +76,8 @@ const restart =()=>{
   btn.forEach((btn__ , index)=>{
     btn__.style.display="flex"
     Array.from(overlay_array)[index].classList.remove('overlay_state')
-
   })
+
 }
 
 
@@ -84,45 +88,90 @@ const restart =()=>{
  *  une fonction pour update() les info sur la side a chaque modification
  *
  */
-var additems = [{'command':"waffle","price":120,"number":0}]
-
-plus_array[0].addEventListener('click',()=>{
-  additems[0].number=overlay_array[0].textContent
-  let div_info= document.createElement('div')
-  let price__=additems[0]['price']*additems[0]["number"]
-  div_info.innerHTML=''
-  div_info.innerHTML=`<h1>${additems[0].command}</h1> <tab> <p>* ${additems[0].number}</p>
-  price : ${price__}`
-  Aside__orderList.appendChild(div_info)
-})
-// btn.forEach((element,index) => {
-//     element.addEventListener('click',()=>
-//     {
-//         is_clicked(element,index)
+var ITEMS =[
+    {
        
-//     })
-// })
+       "name": "Waffle with Berries",
+       "category": "Waffle",
+       "price": 6.50
+    },
+    {
+        "name": "Vanilla Bean Crème Brûlée",
+        "category": "Crème Brûlée",
+        "price": 7.00
+     },
+     {
+        "name": "Macaron Mix of Five",
+        "category": "Macaron",
+        "price": 8.00
+     },
+     {
+        "name": "Classic Tiramisu",
+        "category": "Tiramisu",
+        "price": 5.50
+     },
+     {
+        "name": "Pistachio Baklava",
+        "category": "Baklava",
+        "price": 4.00
+     },
+     {
+        
+        "name": "Lemon Meringue Pie",
+        "category": "Pie",
+        "price": 5.00
+     },
+     {
+       
+        "name": "Red Velvet Cake",
+        "category": "Cake",
+        "price": 4.50
+     },
+     {
+        "name": "Salted Caramel Brownie",
+        "category": "Brownie",
+        "price": 4.50
+     },
+     {
+        
+        "name": "Vanilla Panna Cotta",
+        "category": "Panna Cotta",
+        "price": 6.50
+     }
+]
+var Is_items__add = []
 
-// var is_clicked =(element,index)=>{
-//       if(element.classList.contains(`clicked`+index))
-//         {
-//           let actual=parseInt( element.textContent)
-//           element.innerHTML= update_btn_content(actual)
-//         }
-//         else{
-//              order=0
-//              element.classList.add(`clicked`+index)
-//              Desserts_image_set[index].style.border="3px solid orange"
-//              element.style.background="orange"
-//               element.innerHTML=
-//              update_btn_content(order)
-//         }
+const product__add_preview = (index,product_qte)=>{
+ 
+  is__product_in_list(index,product_qte)
+}
+const is__product_in_list =(index,prod)=>{
+if(!Is_items__add.includes(index)){
+  var div = document.createElement('div')
+  div.setAttribute('class','showed_prod')
+  Is_items__add.push(index)
+  div.innerHTML=return_prod_added_info(ITEMS,prod,index)
+  Aside__orderList.appendChild(div)
+  add_newprod_info_to_ITEMS(index,div)
 
-// }
-// var update_btn_content  = (order_num)=>{ 
-//     return(
-//      `<div>
-//         <span>${++order_num}</span>
-//    </div>`   
-//     )
-// }
+}
+
+else{
+  ITEMS[index].contentDiv.innerHTML=return_prod_added_info(ITEMS,prod,index)
+}
+}
+const add_newprod_info_to_ITEMS=(prod_index,prod_info)=>{
+    ITEMS[prod_index].contentDiv=prod_info
+    aside_img_text.style.display='none'
+
+}
+const return_prod_added_info=(ProductList, orderprod_num,index)=>{
+  return ("<h1>"+ProductList[index].name+`</h1> <div class="product"+${index}">
+  <span>* ${orderprod_num} </span>
+  <span class="actual_price">${ProductList[index].price}</span>
+  <span class="calculate_price">${ProductList[index].price * orderprod_num}</span></div>`)
+}
+// JE dois gerer le fait que si la liste des produits affichee est vide 
+//oon revient a l'image de depart 
+//mettre a jour la fonction restart() pour cela et implementer d'autres fonctions
+//ENfin gerer le style des produits dans la liste

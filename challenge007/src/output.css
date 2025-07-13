@@ -2847,7 +2847,16 @@ button,
     height:
       60%;
   }
+}
 
+.showed_prod{
+  display:
+      flex;
+  justify-content:
+      space-evenly;
+}
+
+@media (min-width: 640px){
   .sm\:top-1\/2{
     top:
       50%;
