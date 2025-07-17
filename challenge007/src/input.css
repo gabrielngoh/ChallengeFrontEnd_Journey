@@ -31,5 +31,8 @@
     @apply sm:h-[60%] w-[90%] mx-auto rounded-xl
 }
 .showed_prod{
-    @apply flex justify-between border-b border-gray-300 w-[90%] ml-[5%] 
+    @apply flex justify-between py-2.5 border-b border-gray-300 w-[90%] ml-[5%] 
+}
+.unshowed_prod{
+    @apply hidden
 }

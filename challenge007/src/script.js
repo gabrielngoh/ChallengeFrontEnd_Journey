@@ -1,14 +1,5 @@
- 
-/*
-  Mes Notes : 
- 
- Apres un clic sur un boutton Add to Cart le systeme doit :
- * 1-Changer la couleur  des bordures des bouttons et du produit  (done)
- * 2-Changer le contenu du boutton et le background (done)
- * 3- Faire la MAJ sur la liste des produits  
- * 
- */
- 
+/** Select HTML element  */
+
 const Desserts_image_set = document.querySelectorAll('.Card1>img,.Card2>img,.Card3>img,.Card4>img,.Card5>img,.Card6>img,.Card7>img,.Card8>img,.Card9>img')
 const btn = document.querySelectorAll('.Card1 .Add_to_cart_btn,.Card2 .Add_to_cart_btn,.Card3 .Add_to_cart_btn, .Card4 .Add_to_cart_btn, .Card5 .Add_to_cart_btn,.Card6 .Add_to_cart_btn,.Card7 .Add_to_cart_btn,.Card8 .Add_to_cart_btn,.Card9 .Add_to_cart_btn')
 const overlay_array = document.querySelectorAll('.Card1>.overlay,.Card2 .overlay, .Card3>.overlay, .Card4>.overlay, .Card5>.overlay,.Card6>.overlay,.Card7>.overlay,.Card8>.overlay,.Card9>.overlay')
@@ -17,12 +8,8 @@ const minus_array = document.querySelectorAll('.Card1 .remove,.Card2 .remove, .C
 const order_quantity = document.querySelectorAll('.Card1 .Quantity,.Card2 .Quantity, .Card3 .Quantity, .Card4 .Quantity, .Card5 .Quantity,.Card6 .Quantity,.Card7 .Quantity,.Card8 .Quantity,.Card9 .Quantity')
 const Aside__orderList= document.querySelector('aside')
 const aside_img_text=document.querySelector('#aside_img_emptyProdPara')
-var order=1
 
-/**Afficher un overlay (done )
- * clique sur l'image + ou - pour ajouter augmenter ou reduire le nombre de produits commende
- * Ajouter ce produit a la side bar 
- */
+/* Changing image product border to Orange */
 btn.forEach((button,index_btn)=>{
   button.addEventListener('click',()=>{
       Array.from(overlay_array)[index_btn].classList.add('overlay_state')
@@ -30,6 +17,8 @@ btn.forEach((button,index_btn)=>{
 
   })
 })
+
+/** Handle plus and minus icons to update ordered product number  */
 plus_array.forEach((plus_image,index_img)=>{
    let span = Array.from(order_quantity)[index_img]
    plus_image.addEventListener('click',()=>{
@@ -63,7 +52,7 @@ const increment__=(overlay__span)=>{
 }
 const decrement__=(overlay__span)=>{
   let old__quantity = parseInt(overlay__span.textContent)
-  if(old__quantity==1){
+  if(old__quantity<=1){
     console.log('restart ...')
     restart()
   }
@@ -80,13 +69,7 @@ const restart =()=>{
 
 }
 
-/**
- * AJOUTER UN ITEMS DANS LA SIde bar :
- * Une fonction pour ajouter le produit avec le nom , la quantite , le prix initial et le prix final ajouter()
- *une fonction qui verifie si le produit existe deja dans la side bar ... si oui juste update() sinon ajouter()
- *  une fonction pour update() les info sur la side a chaque modification
- *
- */
+/** Aside Bar preview after add or remove product  */
 var ITEMS =[
     {
        
@@ -145,13 +128,15 @@ const product__add_preview = (index,product_qte)=>
   is__product_in_list(index,product_qte)
 }
 
+
 const is__product_in_list =(index,prod)=>{
 if(!Is_items__add.includes(index)){
   var div = document.createElement('div')
-  div.setAttribute('class','showed_prod')
+  div.classList.add(`showed_prod`)
+  
   Is_items__add.push(index)
   div.innerHTML=return_prod_added_info(ITEMS,prod,index)
-  Aside__orderList.appendChild(div)
+  Aside__orderList.appendChild(div) 
   add_newprod_info_to_ITEMS(index,div)
 }
 
@@ -164,18 +149,33 @@ const add_newprod_info_to_ITEMS=(prod_index,prod_info)=>{
     aside_img_text.style.display='none'
 
 }
-const remove_items=(indexItems)=>{
-  
-  
 
-}
 const return_prod_added_info=(ProductList, orderprod_num,index)=>{
-  return ("<div><h1 class=\"font-semibold\">"+ProductList[index].name+`</h1><div class="product"+${index}">
+  return ("<div class=\"w-fit   \"><h1 class=\"font-semibold\">"+ProductList[index].name+`</h1><div class="product"+${index}">
   <span class=" text-MyRed">${orderprod_num}x</span>
   <span class="actual_price  pl-[7.5%] text-gray-500 ">@${ProductList[index].price}&dollar;</span>
-  <span class="calculate_price pl-[7.5%] text-gray-700 font-semibold">${ProductList[index].price * orderprod_num}&dollar;</span></div></div> <img src="../assets/images/icon-remove-item.svg" class=\"bg-blue-500 rounded-xl h-[20px]\">`)
+  <span class="calculate_price pl-[7.5%] text-gray-700 font-semibold">${ProductList[index].price * orderprod_num}&dollar;</span></div></div> <img src="../assets/images/icon-remove-item.svg" id="cross${index}" class=\"border-2  rounded-xl h-[20px]\">`)
 }
-// JE dois gerer le fait que si la liste des produits affichee est vide 
-//oon revient a l'image de depart 
-//mettre a jour la fonction restart() pour cela et implementer d'autres fonctions
-//ENfin gerer le style des produits dans la li
+
+/**Cross close implementation */
+document.addEventListener('click', function (event) {
+  const target = event.target;
+  
+  if (!target || !target.id.startsWith('cross')) return;
+
+  const index = parseInt(target.id.replace('cross', ''));
+  const product = ITEMS[index];
+
+  if (!product?.contentDiv) return;
+
+  product.contentDiv.remove();
+  Is_items__add = Is_items__add.filter(i => i !== index);
+  delete product.contentDiv;
+
+  aside_img_text.style.display = Is_items__add.length === 0 ? 'block' : 'none';
+  overlay_array[index].classList.remove('overlay_state');
+  btn[index].style.display = 'flex';
+  Desserts_image_set[index].style.border = 'none';
+  order_quantity[index].textContent = '1';
+});
+
