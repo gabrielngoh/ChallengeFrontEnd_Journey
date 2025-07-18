@@ -127,6 +127,7 @@ const product__add_preview = (index,product_qte)=>
 {
   is__product_in_list(index,product_qte)
   modify_array(index,product_qte)
+  total_price.textContent=return_facture()
 }
 
 
@@ -178,6 +179,7 @@ document.addEventListener('click', function (event) {
   aside_img_text.style.display = Is_items__add.length === 0 ? 'block' : 'none';
   total_button_set.style.display = Is_items__add.length === 0 ? 'none' : 'flex';
   overlay_array[index].classList.remove('overlay_state');
+
   btn[index].style.display = 'flex';
   Desserts_image_set[index].style.border = 'none';
   order_quantity[index].textContent = '1';
@@ -213,10 +215,13 @@ const modify_array =(index,number)=>{
 }
 const return_facture =()=>{
   return ITEMS.reduce((acc, item) => acc + (item.sum_cash || 0), 0);
-
 }
 
-
+/**
+ * Bug : 
+ * quand on retire un produit on doit retrancher son prix total dans le total_price
+ * quand le nombre de produit commander est   a zero il faut supprimer le produit dans la liste directement 
+ */
 /**
  * Popup successfully order !
  */
