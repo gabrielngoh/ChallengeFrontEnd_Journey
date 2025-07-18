@@ -6,9 +6,10 @@ const overlay_array = document.querySelectorAll('.Card1>.overlay,.Card2 .overlay
 const plus_array = document.querySelectorAll('.Card1 .add_items,.Card2 .add_items, .Card3 .add_items, .Card4 .add_items, .Card5 .add_items,.Card6 .add_items,.Card7 .add_items,.Card8 .add_items,.Card9 .add_items')
 const minus_array = document.querySelectorAll('.Card1 .remove,.Card2 .remove, .Card3 .remove, .Card4 .remove, .Card5 .remove,.Card6 .remove,.Card7 .remove,.Card8 .remove,.Card9 .remove')
 const order_quantity = document.querySelectorAll('.Card1 .Quantity,.Card2 .Quantity, .Card3 .Quantity, .Card4 .Quantity, .Card5 .Quantity,.Card6 .Quantity,.Card7 .Quantity,.Card8 .Quantity,.Card9 .Quantity')
-const Aside__orderList= document.querySelector('aside')
+const Aside__orderList= document.querySelector('#aside_productList')
 const aside_img_text=document.querySelector('#aside_img_emptyProdPara')
-
+const total_button_set =document.querySelector('#Total_bubble_button')
+const total_price = document.querySelector('#total_price')
 /* Changing image product border to Orange */
 btn.forEach((button,index_btn)=>{
   button.addEventListener('click',()=>{
@@ -49,12 +50,14 @@ const is_plus_or_minus =(incre_decre_btn,span)=>{
 const increment__=(overlay__span)=>{
   let actual_quantity = parseInt(overlay__span.textContent)
   overlay__span.textContent= ++actual_quantity
+
+    
 }
 const decrement__=(overlay__span)=>{
   let old__quantity = parseInt(overlay__span.textContent)
   if(old__quantity<=1){
     console.log('restart ...')
-    restart()
+    
   }
   else{
         overlay__span.textContent= --old__quantity
@@ -62,10 +65,7 @@ const decrement__=(overlay__span)=>{
   }
 }
 const restart =()=>{
-  btn.forEach((btn__ , index)=>{
-    btn__.style.display="flex"
-    Array.from(overlay_array)[index].classList.remove('overlay_state')
-  })
+  
 
 }
 
@@ -126,6 +126,7 @@ var Is_items__add = []
 const product__add_preview = (index,product_qte)=>
 {
   is__product_in_list(index,product_qte)
+  modify_array(index,product_qte)
 }
 
 
@@ -147,10 +148,12 @@ else{
 const add_newprod_info_to_ITEMS=(prod_index,prod_info)=>{
     ITEMS[prod_index].contentDiv=prod_info
     aside_img_text.style.display='none'
+    total_button_set.style.display='flex'
 
 }
 
 const return_prod_added_info=(ProductList, orderprod_num,index)=>{
+
   return ("<div class=\"w-fit   \"><h1 class=\"font-semibold\">"+ProductList[index].name+`</h1><div class="product"+${index}">
   <span class=" text-MyRed">${orderprod_num}x</span>
   <span class="actual_price  pl-[7.5%] text-gray-500 ">@${ProductList[index].price}&dollar;</span>
@@ -173,9 +176,48 @@ document.addEventListener('click', function (event) {
   delete product.contentDiv;
 
   aside_img_text.style.display = Is_items__add.length === 0 ? 'block' : 'none';
+  total_button_set.style.display = Is_items__add.length === 0 ? 'none' : 'flex';
   overlay_array[index].classList.remove('overlay_state');
   btn[index].style.display = 'flex';
   Desserts_image_set[index].style.border = 'none';
   order_quantity[index].textContent = '1';
+
 });
 
+/**Gerer finalement la carte aside :
+ * Penser A faire un container pour les produits dans mon aside 
+ * faire un autre div pour les elements restants (total + boutton)
+ */
+
+/**
+ * Gerer Les valeurs dans le h1 et  total
+ */
+const add_property =(Box_obj)=>{
+  Box_obj['num_produit']=0
+  Box_obj['Total']=0
+}
+var sum_cash=0
+var sum_product=0
+const add_total_cash =()=>
+{
+  ITEMS.map(element=>{
+    add_property(element)
+  })
+}
+add_total_cash(ITEMS)
+
+const modify_array =(index,number)=>{
+   ITEMS[index].sum_product = number
+   ITEMS[index].sum_cash = number * ITEMS[index].price
+   
+}
+const return_facture =()=>{
+  return ITEMS.reduce((acc, item) => acc + (item.sum_cash || 0), 0);
+
+}
+
+
+/**
+ * Popup successfully order !
+ */
+//Refaire le HTML . BONUS : Quelques animations GSAP
