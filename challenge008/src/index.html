@@ -1,0 +1,49 @@
+<html lang="en">
+  <!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="output.css">
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+</head>
+<body class="font-inter text-body sm:flex sm:justify-center">
+  
+<section class=" overflow-hidden  h-screen  sm:h-[90vh]  sm:grid-cols-2 sm:grid-rows-1 grid grid-cols-1 mt-12   grid-rows-2  items-center  sm:gap-0 gap-[5%] bg-[url(../images/pattern-curve.svg)]  bg-contain bg-no-repeat bg-left-bottom">
+  <div class=" sm:order-5 col-span-1 sm:row-start-1 sm:col-start-2 relative flex  flex-col justify-center  place-items-center  w-full border-transparent h-full sm:h-[90%] bg-center bg-[url(../images/pattern-bg.svg)]  bg-contain bg-no-repeat">
+    <img id="image_profile" src="../images/image-tanya.jpg" class="sm:ml-1 sm:z-0 sm:h-[70%]  w-[60%] h-[80%]  object-cover object-top rounded-xl border-transparent mx-auto shadow-xl" alt="image_tanya">
+    <div id=" " class=" *:h-1/3  absolute flex justify-around items-center  bottom-[5%] sm:h-[7%] sm:w-1/6 sm:left-[5%] sm:bottom-[12.5%]  h-1/6 w-1/4  rounded-[5rem] bg-black " >
+      <img id="previous_btn" src="../images/icon-prev.svg" alt="prev_icon">
+      <img id="next_btn" src="../images/icon-next.svg" alt="next_icon">
+    </div>
+  </div>
+  <div class="paragraphe sm:w-3/5  sm:row-start-1 sm:col-start-1 sm:col-end-3 sm:z-19 sm:col-span-2  z-20 sm:order-1 sm:text-justify text-center py-[5%] text-[18px] px-[5%] bg-[url(../images/pattern-quotes.svg)] bg-top bg-no-repeat">
+    <p id="description" class=" text-blue-950 ">
+      “ I’ve been interested in coding for a while but never taken the jump, until now. 
+  I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
+  excited about the future. ”
+    </p> <br> <br>
+     <div class="profile sm:flex sm:gap-[1%]">
+      <h1 id="Name" class="text-blue-950 font-extrabold">Tanya Sinclair</h1>
+      <p id="Job" class=" text-myGray-400">UX Engineer</p>
+     </div>
+  </div>
+ 
+</section>
+  
+
+  
+  
+
+  <!--“ If you want to lay the best foundation possible I’d recommend taking this course. 
+  The depth the instructors go into is incredible. I now feel so confident about 
+  starting up as a professional developer. ”
+
+  John Tarkpor
+  Junior Front-end Developer-->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
