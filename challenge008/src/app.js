@@ -6,8 +6,8 @@ const Name = document.querySelector('#Name');
 const Job = document.querySelector('#Job');
 
 const image_url_array = [
-  "../images/image-tanya.jpg",
-  "../images/image-john.jpg"
+  "./images/image-tanya.jpg",
+  "./images/image-john.jpg"
 ];
 
 const testimony_array = [
