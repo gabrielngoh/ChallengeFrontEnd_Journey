@@ -10,6 +10,11 @@ const Aside__orderList= document.querySelector('#aside_productList')
 const aside_img_text=document.querySelector('#aside_img_emptyProdPara')
 const total_button_set =document.querySelector('#Total_bubble_button')
 const total_price = document.querySelector('#total_price')
+const confirm_btn = document.querySelector('#confirm_button')
+const dialog = document.querySelector('dialog')
+const dialog_btn = document.querySelector('#dialog_btn')
+const Order_confirmed_list= document.querySelector('#Order_confirmed_list')
+
 /* Changing image product border to Orange */
 btn.forEach((button,index_btn)=>{
   button.addEventListener('click',()=>{
@@ -121,6 +126,7 @@ var ITEMS =[
         "price": 6.50
      }
 ]
+
 var Is_items__add = []
 
 const product__add_preview = (index,product_qte)=>
@@ -140,10 +146,13 @@ if(!Is_items__add.includes(index)){
   div.innerHTML=return_prod_added_info(ITEMS,prod,index)
   Aside__orderList.appendChild(div) 
   add_newprod_info_to_ITEMS(index,div)
+  //Order_confirmed_list.append(div)
 }
 
 else{
+  
   ITEMS[index].contentDiv.innerHTML=return_prod_added_info(ITEMS,prod,index)
+  
 }
 }
 const add_newprod_info_to_ITEMS=(prod_index,prod_info)=>{
@@ -160,6 +169,14 @@ const return_prod_added_info=(ProductList, orderprod_num,index)=>{
   <span class="actual_price  pl-[7.5%] text-gray-500 ">@${ProductList[index].price}&dollar;</span>
   <span class="calculate_price pl-[7.5%] text-gray-700 font-semibold">${ProductList[index].price * orderprod_num}&dollar;</span></div></div> <img src="../assets/images/icon-remove-item.svg" id="cross${index}" class=\"border-2  rounded-xl h-[20px]\">`)
 }
+const return_product_add_to_dialog =(ProductList, orderprod_num,index)=>{
+
+  return ("<img src=`../assets/`><div class=\"w-fit   \"><h1 class=\"font-semibold\">"+ProductList[index].name+`</h1><div class="product"+${index}">
+  <span class=" text-MyRed">${orderprod_num}x</span>
+  <span class="actual_price  pl-[7.5%] text-gray-500 ">@${ProductList[index].price}&dollar;</span>
+  <span class="calculate_price pl-[7.5%] text-gray-700 font-semibold">${ProductList[index].price * orderprod_num}&dollar;</span></div></div> `)
+}
+
 
 /**Cross close implementation */
 document.addEventListener('click', function (event) {
@@ -226,3 +243,24 @@ const return_facture =()=>{
  * Popup successfully order !
  */
 //Refaire le HTML . BONUS : Quelques animations GSAP
+function add_property_items_dialog(items,index){
+  items[`src${index}`]=`../assets/images/image-${(items['name'].split(' '))[0].toLowerCase()}-thumbnail.svg`
+}
+ var ITEMS_dialog= ITEMS
+ //add_property_items_dialog(ITEMS_dialog[0],0)
+ ITEMS_dialog.map((product,index)=>{
+  add_property_items_dialog(product,index)
+ })
+ //.map((items,index)=>{
+//   add_property_items_dialog(items,index)
+// })
+confirm_btn.addEventListener('click',()=>{
+  dialog.showModal()
+})
+dialog_btn.addEventListener('click',()=>{
+  /** Reinitialiser toutes les valeurs apres le close() */
+  dialog.close()
+})
+console.log(ITEMS_dialog)
+
+//Ligne 246 

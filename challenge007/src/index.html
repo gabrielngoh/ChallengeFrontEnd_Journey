@@ -192,12 +192,19 @@
         </span>
         <p class="flex justify-between  bg-MyRose50 rounded-xl px-[5%] py-[3.5%]">
         <img src="../assets/images/icon-carbon-neutral.svg" alt="icon_carbon_neutral"><span>This is a <span class=" font-extrabold">carbon-neutral</span> delivery</span></p>
-        <button type="button" class=" bg-MyRed py-[1em]  font-extrabold text-MyRose100 rounded-3xl">Confirm Order</button>
+        <button type="button" id="confirm_button" class=" bg-MyRed py-[1em]  font-extrabold text-MyRose100 rounded-3xl">Confirm Order</button>
       </div>
-     
-
     </aside>
   </section>
+  <dialog>
+    <img src="../assets/images/icon-order-confirmed.svg" alt="confirmed_icon">
+    <header>
+      <h1>Order Confirmed</h1>
+      <p>We Hope You Enjoyed Your Food</p>
+      <div id="Order_confirmed_list"></div>
+      <button type="button" id="dialog_btn">Start New Order</button>
+    </header>
+  </dialog>
 <script src="script.js"></script>
   <!--
   
