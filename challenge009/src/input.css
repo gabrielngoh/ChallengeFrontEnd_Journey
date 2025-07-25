@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family:Noto ;
+    src: url('../browser-extensions-manager-ui-main/assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf');
+}
+@font-face{
+    font-family: NotoBold;
+    src: url('../browser-extensions-manager-ui-main/assets/fonts/static/NotoSans-Bold.ttf');
+}
+
+*:focus{
+    @apply outline-Red700   outline-double outline-2 ;
+}
+/*Background color */
+
+.darkcolorTheme{
+    @apply dark:bg-gradient-to-b dark:from-[#040918fa] dark:to-[#091540] bg-no-repeat;
+}
+.lightcolorTheme{
+    @apply bg-gradient-to-b from-[#EBF2FC] to-[#EEF8F9] bg-no-repeat  text-Neutral900 md:*:w-[90%] *:w-[95%] font-Noto h-screen flex  items-center flex-col ;
+} 
+
+/*Filter button Style*/
+.btn_filterList{
+    @apply  *:rounded-full *:dark:bg-Neutral700 *:bg-white *:py-2 *:px-4 ;
+}
+header button, #icon_sun{
+    @apply dark:hover:bg-Neutral600  hover:bg-Red500 hover:cursor-pointer hover:text-white;
+}
