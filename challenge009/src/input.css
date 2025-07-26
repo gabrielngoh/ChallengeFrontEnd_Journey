@@ -28,6 +28,11 @@
 .btn_filterList{
     @apply  *:rounded-full *:dark:bg-Neutral700 *:bg-white *:py-2 *:px-4 ;
 }
-header button, #icon_sun{
+ #icon_sun{
     @apply dark:hover:bg-Neutral600  hover:bg-Red500 hover:cursor-pointer hover:text-white;
+}
+
+/*Card styling */
+p{
+    @apply text-[16px];
 }
