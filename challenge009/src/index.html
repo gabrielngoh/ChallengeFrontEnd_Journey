@@ -6,168 +6,121 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="../browser-extensions-manager-ui-main/assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./output.css">
-  
   <title>Frontend Mentor | Browser extensions manager UI</title>
-
 </head>
-<body class="h-screen  dark:bg-gradient-to-b dark:from-[#040918fa] dark:to-[#091540] bg-no-repeat dark:text-white lightcolorTheme">
-  <header class="flex justify-between items-center  shadow-md md:p-[1%] mt-[5%] p-[2.5%] bg-white dark:bg-Neutral800 rounded-xl">
-    <img  src="../browser-extensions-manager-ui-main/assets/images/logo.svg"  alt="extensionUILogo">
-    <img id="icon_sun" class=" dark:bg-Neutral700 bg-Neutral200 md:p-[1%]  p-[3.5%] rounded-xl" tabindex="1" aria-label="icon_switch_sun" src="../browser-extensions-manager-ui-main/assets/images/icon-sun.svg" alt="icon_sun">
+<body class=" h-[500vh]  dark:bg-gradient-to-b dark:from-[#040918fa] dark:to-[#091540] bg-no-repeat dark:text-white lightcolorTheme">
+  <header class=" md:h-[7.5%] flex justify-between items-center  shadow-md md:py-[0.5%] md:px-[0.75%] md:mt-[2.5%] mt-[5%] p-[2.5%] bg-white dark:bg-Neutral800 rounded-xl">
+    <img class="md:h-full md:pt" src="../browser-extensions-manager-ui-main/assets/images/logo.svg"  alt="extensionUILogo">
+    <img id="icon_sun" class=" dark:bg-Neutral700 bg-Neutral200 md:p-[0.5%] p-[3.5%] md:rounded-lg rounded-xl" tabindex="1" aria-label="icon_switch_sun" src="../browser-extensions-manager-ui-main/assets/images/icon-sun.svg" alt="icon_sun">
   </header>
-  <section class=" mt-8 h-full overflow-scroll">
-      <header class="flex md:flex-row md:justify-between md:items-center  flex-col items-center">
-            <h1 class=" mb-[5%] text-2xl  font-NotoBold">Extensions List</h1>
+  <section class=" mt-8 h-full  md:overflow-clip overflow-auto">
+      <header class="flex md:h-[7.5%] md:flex-row md:justify-between md:items-center  flex-col items-center">
+            <h1 class="sm:text-xl text-2xl  font-NotoBold">Extensions List</h1>
             <div id="filter_state" class="btn_filterList dark:text-Neutral300" aria-label="filter_list_button">
               <button type="button"  id="AllFilter">All</button>
               <button type="button" id="ActiveFilter">Active</button>
               <button type="button" id="InactiveFilter">Inactive</button>
             </div>
       </header>    
-      <main class="mt-[10%] sm:mt-[1.5%] grid h-[85%] w-full sm:grid-cols-3 sm:grid-rows-4 sm:gap-3 grid-cols-1 grid-rows-12 gap-y-[0.5%]"> 
+      <main class="mt-[10%] sm:mt-[1.5%] grid place-items-start md:h-fit h-full w-full sm:grid-cols-3 sm:grid-rows-[repeat(auto-fit,150px)] grid-cols-1 grid-rows-[repeat(auto-fill,fit-content)] gap-y-[0.5%]"> 
        <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
+        <div class="logo-paragrap h-2/3 flex gap-[4%]">
+          <img class="h-1/2 " src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
           <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
+            <h1 class=" font-NotoBold  text-[18px]">DevLens</h1>
             <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
           </div>
         </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
+        <div class="buttonsession h-fit flex justify-between items-center sm:mt-[10%] mt-[10%]">
+          <button type="button" class="block  sm:w-1/4 w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full ">Remove</button>
+          <span class="relative block rounded-full bg-Red700  md:w-[12%] w-[11.5%] md:h-3 h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
         </div>
        </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
+        <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
+        <div class="logo-paragrap h-2/3 flex gap-[4%]">
+          <img class="h-1/2 " src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
           <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
+            <h1 class=" font-NotoBold  text-[18px]">DevLens</h1>
+            <p class=" ">  Enables annotation and notes directly onto webpages for collaborative debugging.
+</p>
           </div>
         </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
+        <div class="buttonsession h-fit flex justify-between items-center sm:mt-[10%] mt-[10%]">
+          <button type="button" class="block  sm:w-1/4 w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full ">Remove</button>
+          <span class="relative block rounded-full bg-Red700  md:w-[12%] w-[11.5%] md:h-3 h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
         </div>
        </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
+        <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
+        <div class="logo-paragrap h-2/3 flex gap-[4%]">
+          <img class="h-1/2 " src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
           <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
+            <h1 class=" font-NotoBold  text-[18px]">DevLens</h1>
+            <p class=" ">  Enables annotation and notes directly onto webpages for collaborative debugging.
+</p>
           </div>
         </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
+        <div class="buttonsession h-fit flex justify-between items-center sm:mt-[10%] mt-[10%]">
+          <button type="button" class="block  sm:w-1/4 w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full ">Remove</button>
+          <span class="relative block rounded-full bg-Red700  md:w-[12%] w-[11.5%] md:h-3 h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
         </div>
        </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
+        <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
+        <div class="logo-paragrap h-2/3 flex gap-[4%]">
+          <img class="h-1/2 " src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
           <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
+            <h1 class=" font-NotoBold  text-[18px]">DevLens</h1>
+            <p class=" ">  Enables annotation and notes directly onto webpages for collaborative debugging.
+</p>
           </div>
         </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
+        <div class="buttonsession h-fit flex justify-between items-center sm:mt-[10%] mt-[10%]">
+          <button type="button" class="block  sm:w-1/4 w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full ">Remove</button>
+          <span class="relative block rounded-full bg-Red700  md:w-[12%] w-[11.5%] md:h-3 h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
         </div>
        </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
+        <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
+        <div class="logo-paragrap h-2/3 flex gap-[4%]">
+          <img class="h-1/2 " src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
           <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
+            <h1 class=" font-NotoBold  text-[18px]">DevLens</h1>
+            <p class=" ">  Enables annotation and notes directly onto webpages for collaborative debugging.
+</p>
           </div>
         </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
+        <div class="buttonsession h-fit flex justify-between items-center sm:mt-[10%] mt-[10%]">
+          <button type="button" class="block  sm:w-1/4 w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full ">Remove</button>
+          <span class="relative block rounded-full bg-Red700  md:w-[12%] w-[11.5%] md:h-3 h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
         </div>
        </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
+        <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
+        <div class="logo-paragrap h-2/3 flex gap-[4%]">
+          <img class="h-1/2 " src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
           <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
+            <h1 class=" font-NotoBold  text-[18px]">DevLens</h1>
+            <p class=" ">  Enables annotation and notes directly onto webpages for collaborative debugging.
+</p>
           </div>
         </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
+        <div class="buttonsession h-fit flex justify-between items-center sm:mt-[10%] mt-[10%]">
+          <button type="button" class="block  sm:w-1/4 w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full ">Remove</button>
+          <span class="relative block rounded-full bg-Red700  md:w-[12%] w-[11.5%] md:h-3 h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
         </div>
        </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
+        <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
+        <div class="logo-paragrap h-2/3 flex gap-[4%]">
+          <img class="h-1/2 " src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
           <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
+            <h1 class=" font-NotoBold  text-[18px]">DevLens</h1>
+            <p class=" ">  Enables annotation and notes directly onto webpages for collaborative debugging.
+</p>
           </div>
         </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
+        <div class="buttonsession h-fit flex justify-between items-center sm:mt-[10%] mt-[10%]">
+          <button type="button" class="block  sm:w-1/4 w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full ">Remove</button>
+          <span class="relative block rounded-full bg-Red700  md:w-[12%] w-[11.5%] md:h-3 h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
         </div>
        </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
-          <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
-          </div>
-        </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
-        </div>
-       </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
-          <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
-          </div>
-        </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
-        </div>
-       </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
-          <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
-          </div>
-        </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
-        </div>
-       </div>
-       <div class="card p-[5%] bg-white text-Neutral900 rounded-xl">
-        <div class="logo-paragrap flex gap-[4%]">
-          <img class=" h-1/4" src="../browser-extensions-manager-ui-main/assets/images/logo-devlens.svg" alt="DevLens logo">
-          <div class="Text ">
-            <h1 class=" font-NotoBold text-xl">DevLens</h1>
-            <p class=" ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, similique.</p>
-          </div>
-        </div>
-        <div class="buttonsession flex justify-between items-center mt-[10%]">
-          <button type="button" class="block w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full p-2">Remove</button>
-          <span class="relative block rounded-full bg-Red700 w-[11.5%] h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
-        </div>
-       </div>
+      ♫
       </main>
   </section>
   

@@ -26,7 +26,11 @@
 
 /*Filter button Style*/
 .btn_filterList{
-    @apply  *:rounded-full *:dark:bg-Neutral700 *:bg-white *:py-2 *:px-4 ;
+    @apply  flex justify-between sm:justify-between sm:w-1/4 w-[90%] *:rounded-full *:dark:bg-Neutral700 *:bg-white md:*:py-1 md:*:px-3 *:py-2 *:px-4 *:text-xl sm:*:text-sm;
+
+}
+.btn_filterList>*:hover{
+    @apply bg-Neutral600;
 }
  #icon_sun{
     @apply dark:hover:bg-Neutral600  hover:bg-Red500 hover:cursor-pointer hover:text-white;
@@ -34,5 +38,14 @@
 
 /*Card styling */
 p{
-    @apply text-[16px];
+    @apply md:text-[12px] text-[16px];
+}
+.card{
+    @apply md:w-[95%] md:h-[95%] pb-8 w-full h-[90%] dark:bg-Neutral700 dark:text-Neutral200;
+}
+.card h1{
+    @apply md:text-[16px] text-[20px];
+}
+.card button{
+    @apply text-[12px]
 }

@@ -20,12 +20,12 @@ We provide the data for the extensions in a local `data.json` file. So you can u
 
 Your users should be able to: 
 
-- Toggle extensions between active and inactive states
-- Filter active and inactive extensions
-- Remove extensions from the list
-- Select their color theme
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+- Toggle extensions between active and inactive states(No started)
+- Filter active and inactive extensions(No started)
+- Remove extensions from the list(No started)
+- Select their color theme(in progress)
+- View the optimal layout for the interface depending on their device's screen size (90%)
+- See hover and focus states for all interactive elements on the page (done)
 
 Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
 
