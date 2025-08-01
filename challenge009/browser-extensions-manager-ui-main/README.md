@@ -20,10 +20,10 @@ We provide the data for the extensions in a local `data.json` file. So you can u
 
 Your users should be able to: 
 
-- Toggle extensions between active and inactive states(No started)
-- Filter active and inactive extensions(No started)
+- Toggle extensions between active and inactive states(done)
+- Filter active and inactive extensions(done )
 - Remove extensions from the list(No started)
-- Select their color theme(in progress)
+- Select their color theme(done)
 - View the optimal layout for the interface depending on their device's screen size (90%)
 - See hover and focus states for all interactive elements on the page (done)
 
