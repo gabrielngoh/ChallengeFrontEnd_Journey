@@ -34,7 +34,7 @@
     {
         "id":555,
         "logo": "../browser-extensions-manager-ui-main/assets/images/logo-tab-master-pro.svg",
-        "name": "TabMaster Pro",
+        "name": "TabMasterPro",
         "description": "Organizes browser tabs into groups and sessions.",
         "isActive": true,
         "isRemoved":false
@@ -50,7 +50,7 @@
     {
         "id":777,
         "logo": "../browser-extensions-manager-ui-main/assets/images/logo-markup-notes.svg",
-        "name": "Markup Notes",
+        "name": "Markup-Notes",
         "description": "Enables annotation and notes directly onto webpages for collaborative debugging.",
         "isActive": true,
         "isRemoved":false
@@ -66,7 +66,7 @@
     {
         "id":999,
         "logo": "../browser-extensions-manager-ui-main/assets/images/logo-palette-picker.svg",
-        "name": "Palette Picker",
+        "name": "PalettePicker",
         "description": "Instantly extracts color palettes from any webpage.",
         "isActive": true,
         "isRemoved":false

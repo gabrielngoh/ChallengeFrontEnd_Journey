@@ -57,27 +57,51 @@ function display (card){
         </div>
         <div class="buttonsession h-fit flex justify-between items-center sm:mt-[10%] mt-[10%]">
           <button type="button" id="remove-${card.id}" class="block  sm:w-1/4 w-1/3 bg-transparent  border-Neutral300 border-2 rounded-full ">Remove</button>
-          <span class="relative block rounded-full bg-Red700  md:w-[12%] w-[11.5%] md:h-3 h-5"><span class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
+          <span class="relative block rounded-full   md:w-[12%] w-[11.5%] md:h-3 h-5" id="tube_ball${card.id}"><span  class="block absolute top-1/2 -translate-y-1/2  ml-[7.5%] rounded-full  h-[85%] w-[45%] bg-white "></span></span>
         </div>
        </div>`
 }
+function addCardToGrid(cardTable, data) {
+  grid.innerHTML = ''
+  cardTable.forEach(card => {
+    const div = document.createElement('div')
+    div.innerHTML = display(card)
 
-function addCardToGrid(cardTable,data){
-  grid.innerHTML=''
-  cardTable.forEach(element=>{
-     const div = document.createElement('div')
-     div.innerHTML= display(element)
-     const removeBtn = div.querySelector('button')
-    removeBtn.addEventListener('click', (event) => {
-      const cardId = parseInt(event.target.id.replace('remove-', ''), 10);
-setisremovedtoFalse(data, cardId);
-addCardToGrid(data.filter(card => !card.isRemoved), data);
-
+    // REMOVE button
+    const removeBtn = div.querySelector(`#remove-${card.id}`)
+    removeBtn.addEventListener('click', () => {
+      setisremovedtoFalse(data, card.id)
+      addCardToGrid(data.filter(c => !c.isRemoved), data)
     })
-     grid.append(div)
-     
+
+    // TOGGLE switch
+    const toggle = div.querySelector(`#tube_ball${card.id}`)
+    const toggleBall = div.querySelector(`#tube_ball${card.id} > span`)
+
+    if (card.isActive) {
+      toggle.classList.add('bg-Red700')
+      toggleBall.classList.add('translate-x-[95%]')
+    } else {
+      toggle.classList.add('bg-Neutral600')
+      toggleBall.classList.add('translate-x-0')
+    }
+
+    
+    toggle.addEventListener('click', () => {
+      card.isActive = !card.isActive
+      // Activate state 
+      toggle.classList.toggle('bg-Red700', card.isActive)
+      toggleBall.classList.toggle('translate-x-[95%]', card.isActive)
+      
+      // Unactive state
+      toggleBall.classList.toggle('translate-x-0', !card.isActive)
+      toggle.classList.toggle('bg-Neutral600', !card.isActive)
+    })
+
+    grid.append(div)
   })
 }
+
 
 function setisremovedtoFalse(data, id) {
   for (let element of data) {
@@ -88,6 +112,5 @@ function setisremovedtoFalse(data, id) {
   }
 }
 
-// Remove ITems 
 
 
