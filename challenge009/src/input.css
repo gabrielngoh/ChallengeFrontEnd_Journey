@@ -49,3 +49,6 @@ p{
 .card button{
     @apply text-[12px]
 }
+.removed{
+    @apply hidden
+}

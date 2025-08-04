@@ -22,7 +22,7 @@ Your users should be able to:
 
 - Toggle extensions between active and inactive states(done)
 - Filter active and inactive extensions(done )
-- Remove extensions from the list(No started)
+- Remove extensions from the list(Progress)
 - Select their color theme(done)
 - View the optimal layout for the interface depending on their device's screen size (90%)
 - See hover and focus states for all interactive elements on the page (done)
