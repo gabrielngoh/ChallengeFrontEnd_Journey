@@ -26,8 +26,14 @@
 
 /*Filter button Style*/
 .btn_filterList{
-    @apply  flex justify-between sm:justify-between sm:w-1/4 w-[90%] *:rounded-full *:dark:bg-Neutral700 *:bg-white md:*:py-1 md:*:px-3 *:py-2 *:px-4 *:text-xl sm:*:text-sm;
+    @apply  flex justify-between sm:justify-between sm:w-1/4 w-[90%] *:rounded-full  md:*:py-1 md:*:px-3 *:py-2 *:px-4 *:text-xl sm:*:text-sm;
 
+}
+.btn_filterList>*{
+    @apply dark:bg-Neutral700 bg-white
+}
+.mod{
+    @apply bg-Red700 text-white dark:bg-Red400 dark:text-Neutral900
 }
 .btn_filterList>*:hover{
     @apply bg-Neutral600;
