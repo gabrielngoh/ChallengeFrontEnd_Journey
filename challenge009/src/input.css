@@ -5,7 +5,7 @@
 
 @font-face {
     font-family:Noto ;
-    src: url('./assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf');
+    src: url('./assets/fonts/static/NotoSans-Regular.ttf');
 }
 @font-face{
     font-family: NotoBold;
