@@ -5,11 +5,11 @@
 
 @font-face {
     font-family:Noto ;
-    src: url('../browser-extensions-manager-ui-main/assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf');
+    src: url('./assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf');
 }
 @font-face{
     font-family: NotoBold;
-    src: url('../browser-extensions-manager-ui-main/assets/fonts/static/NotoSans-Bold.ttf');
+    src: url('./assets/fonts/static/NotoSans-Bold.ttf');
 }
 
 *:focus{
