@@ -51,7 +51,7 @@
         "id":777,
         "logo": "../browser-extensions-manager-ui-main/assets/images/logo-markup-notes.svg",
         "name": "Markup-Notes",
-        "description": "Enables annotation and notes directly onto webpages for collaborative debugging.",
+        "description": "Enables annotation and notes directly onto webpages.",
         "isActive": true,
         "isRemoved":false
     },

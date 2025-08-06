@@ -1,83 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="../browser-extensions-manager-ui-main/assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./output.css">
   <title>Frontend Mentor | Browser extensions manager UI</title>
 </head>
-<body class=" h-[500vh]  dark:bg-gradient-to-b dark:from-[#040918fa] dark:to-[#091540] bg-no-repeat dark:text-white lightcolorTheme">
-  <header class=" md:h-[7.5%] flex justify-between items-center  shadow-md md:py-[0.5%] md:px-[0.75%] md:mt-[2.5%] mt-[5%] p-[2.5%] bg-white dark:bg-Neutral800 rounded-xl">
-    <img class="md:h-full md:pt" src="../browser-extensions-manager-ui-main/assets/images/logo.svg"  alt="extensionUILogo">
-    <img id="icon_sun" class=" dark:bg-Neutral700 bg-Neutral200 md:p-[0.5%] p-[3.5%] md:rounded-lg rounded-xl" tabindex="1" aria-label="icon_switch_sun" src="../browser-extensions-manager-ui-main/assets/images/icon-sun.svg" alt="icon_sun">
+<body class="h-fit  dark:bg-gradient-to-b dark:from-[#040918fa] dark:to-[#091540] dark:text-white lightcolorTheme">
+  <header class="md:h-[7.5%] flex justify-between items-center shadow-md md:py-[0.5%] md:px-[0.75%] md:mt-[2.5%] mt-[5%] p-[2.5%] bg-white dark:bg-Neutral800 rounded-xl">
+    <img class="md:h-full" src="../browser-extensions-manager-ui-main/assets/images/logo.svg" alt="extensionUILogo">
+    <img id="icon_sun" class="dark:bg-Neutral700 bg-Neutral200 md:p-[0.5%] p-[3.5%] md:rounded-lg rounded-xl" tabindex="1" aria-label="icon_switch_sun" src="../browser-extensions-manager-ui-main/assets/images/icon-moon.svg" alt="icon_sun">
   </header>
-  <section class=" mt-8 h-full  md:overflow-clip overflow-auto">
-      <header class="flex md:h-[7.5%] md:flex-row md:justify-between md:items-center  flex-col items-center">
-            <h1 class="sm:text-xl text-2xl  font-NotoBold">Extensions List</h1>
-            <div id="filter_state" class="btn_filterList dark:text-Neutral300" aria-label="filter_list_button">
-              <button type="button"  id="AllFilter"  >All</button>
-              <button type="button" id="ActiveFilter" >Active</button>
-              <button type="button" id="InactiveFilter" >Inactive</button>
-            </div>
-      </header>    
-      <main class="mt-[10%] sm:mt-[1.5%] grid place-items-start md:h-fit h-full w-full sm:grid-cols-3 sm:grid-rows-[repeat(auto-fit,150px)] grid-cols-1 grid-rows-[repeat(auto-fill,fit-content)] gap-y-[0.5%]" id="grid"> 
-        <!-- card Loaded with JS directly  -->
-      </main>
+
+  <section class="mt-8 px-4  overflow-auto sm:height">
+    <header class="flex md:h-[7.5%] md:flex-row md:justify-between md:items-center flex-col items-center">
+      <h1 class="sm:text-xl text-2xl font-NotoBold">Extensions List</h1>
+      <div id="filter_state" class="btn_filterList dark:text-Neutral300" aria-label="filter_list_button">
+        <button type="button" id="AllFilter">All</button>
+        <button type="button" id="ActiveFilter">Active</button>
+        <button type="button" id="InactiveFilter">Inactive</button>
+      </div>
+    </header>
+
+    <main class="mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 auto-rows-fr w-full" id="grid"></main>
   </section>
-  
-<!-- Redimensionner correctement les elements du Header  -->
-
-  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
-
-  <!-- DevLens
-  Quickly inspect page layouts and visualize element boundaries.
-  Remove
-
-  StyleSpy
-  Instantly analyze and copy CSS from any webpage element.
-  Remove
-
-  SpeedBoost
-  Optimizes browser resource usage to accelerate page loading.
-  Remove
-
-  JSONWizard
-  Formats, validates, and prettifies JSON responses in-browser.
-  Remove
-
-  TabMaster Pro
-  Organizes browser tabs into groups and sessions.
-  Remove
-
-  ViewportBuddy
-  Simulates various screen resolutions directly within the browser.
-  Remove
-
-  Markup Notes
-  Enables annotation and notes directly onto webpages for collaborative debugging.
-  Remove
-
-  GridGuides
-  Overlay customizable grids and alignment guides on any webpage.
-  Remove
-
-  Palette Picker
-  Instantly extracts color palettes from any webpage.
-  Remove
-
-  LinkChecker
-  Scans and highlights broken links on any page.
-  Remove
-
-  DOM Snapshot
-  Capture and export DOM structures quickly.
-  Remove
-
-  ConsolePlus
-  Enhanced developer console with advanced filtering and logging.
-  Remove -->
 
   <script src="./app.js"></script>
 </body>

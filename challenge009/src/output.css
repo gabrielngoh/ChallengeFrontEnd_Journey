@@ -1964,6 +1964,11 @@ button,
       both;
 }
 
+.mb-2{
+  margin-bottom:
+      0.5rem;
+}
+
 .ml-\[7\.5\%\]{
   margin-left:
       7.5%;
@@ -1972,6 +1977,11 @@ button,
 .ml-px{
   margin-left:
       1px;
+}
+
+.mt-10{
+  margin-top:
+      2.5rem;
 }
 
 .mt-3{
@@ -2114,11 +2124,6 @@ button,
       2.25rem;
 }
 
-.h-\[500vh\]{
-  height:
-      500vh;
-}
-
 .h-\[85\%\]{
   height:
       85%;
@@ -2148,6 +2153,11 @@ button,
 
 .h-screen{
   height:
+      100vh;
+}
+
+.min-h-screen{
+  min-height:
       100vh;
 }
 
@@ -2191,6 +2201,11 @@ button,
       11.5%;
 }
 
+.w-\[15\%\]{
+  width:
+      15%;
+}
+
 .w-\[45\%\]{
   width:
       45%;
@@ -2232,6 +2247,13 @@ button,
       translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.translate-x-3{
+  --tw-translate-x:
+      0.75rem;
+  transform:
+      translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-x-6{
   --tw-translate-x:
       1.5rem;
@@ -2264,6 +2286,11 @@ button,
 .grid-flow-col{
   grid-auto-flow:
       column;
+}
+
+.auto-rows-fr{
+  grid-auto-rows:
+      minmax(0, 1fr);
 }
 
 .grid-cols-1{
@@ -2424,6 +2451,11 @@ button,
 .overflow-scroll{
   overflow:
       scroll;
+}
+
+.overscroll-y-none{
+  overscroll-behavior-y:
+      none;
 }
 
 .rounded{
@@ -2760,6 +2792,13 @@ button,
       0.25rem;
 }
 
+.px-2{
+  padding-left:
+      0.5rem;
+  padding-right:
+      0.5rem;
+}
+
 .px-3{
   padding-left:
       0.75rem;
@@ -2786,6 +2825,13 @@ button,
       1.5rem;
   padding-right:
       1.5rem;
+}
+
+.px-\[5\%\]{
+  padding-left:
+      5%;
+  padding-right:
+      5%;
 }
 
 .py-1{
@@ -2816,14 +2862,34 @@ button,
       1rem;
 }
 
+.pb-0{
+  padding-bottom:
+      0px;
+}
+
 .pb-8{
   padding-bottom:
       2rem;
 }
 
+.pl-4{
+  padding-left:
+      1rem;
+}
+
 .pt-3{
   padding-top:
       0.75rem;
+}
+
+.pt-\[5\%\]{
+  padding-top:
+      5%;
+}
+
+.pb-4{
+  padding-bottom:
+      1rem;
 }
 
 .text-center{
@@ -3012,6 +3078,11 @@ button,
       underline;
 }
 
+.opacity-30{
+  opacity:
+      0.3;
+}
+
 .shadow-lg{
   --tw-shadow:
       0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -3181,13 +3252,13 @@ button,
   border-radius:
       9999px;
   padding-top:
-      0.5rem;
+      0.25rem;
   padding-bottom:
-      0.5rem;
+      0.25rem;
   padding-left:
-      1rem;
+      0.75rem;
   padding-right:
-      1rem;
+      0.75rem;
   font-size:
       1.25rem;
   line-height:
@@ -3260,6 +3331,11 @@ button,
 }
 
 .btn_filterList>*:hover{
+  opacity:
+      0.8;
+}
+
+.btn_filterList>*:hover:is(.dark *){
   --tw-bg-opacity:
       1;
   background-color:
@@ -3305,8 +3381,6 @@ p{
       90%;
   width:
       100%;
-  padding-bottom:
-      2rem;
 }
 
 .card:is(.dark *){
@@ -3323,9 +3397,7 @@ p{
 @media (min-width: 768px){
   .card{
     height:
-      95%;
-    width:
-      95%;
+      100%;
   }
 }
 
@@ -3366,18 +3438,18 @@ p{
       9999px;
 }
 
-.\*\:px-4 > *{
+.\*\:px-3 > *{
   padding-left:
-      1rem;
+      0.75rem;
   padding-right:
-      1rem;
+      0.75rem;
 }
 
-.\*\:py-2 > *{
+.\*\:py-1 > *{
   padding-top:
-      0.5rem;
+      0.25rem;
   padding-bottom:
-      0.5rem;
+      0.25rem;
 }
 
 .\*\:text-xl > *{
@@ -3397,6 +3469,13 @@ p{
       1;
   background-color:
       hsl(3 71% 56% / var(--tw-bg-opacity, 1));
+}
+
+.dark\:bg-Neutral600:is(.dark *){
+  --tw-bg-opacity:
+      1;
+  background-color:
+      hsl(226 11% 37% / var(--tw-bg-opacity, 1));
 }
 
 .dark\:bg-Neutral700:is(.dark *){
@@ -3468,19 +3547,34 @@ p{
 }
 
 @media (min-width: 640px){
+  .sm\:mt-\[1\%\]{
+    margin-top:
+      1%;
+  }
+
   .sm\:mt-\[1\.5\%\]{
     margin-top:
       1.5%;
   }
 
-  .sm\:mt-\[10\%\]{
+  .sm\:mt-\[2\%\]{
     margin-top:
-      10%;
+      2%;
+  }
+
+  .sm\:mt-\[2\.5\%\]{
+    margin-top:
+      2.5%;
   }
 
   .sm\:w-1\/4{
     width:
       25%;
+  }
+
+  .sm\:grid-cols-2{
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .sm\:grid-cols-3{
@@ -3491,11 +3585,6 @@ p{
   .sm\:grid-rows-\[repeat\(4\2c 25\%\)\]{
     grid-template-rows:
       repeat(4,25%);
-  }
-
-  .sm\:grid-rows-\[repeat\(auto-fit\2c 150px\)\]{
-    grid-template-rows:
-      repeat(auto-fit,150px);
   }
 
   .sm\:justify-between{
@@ -3517,9 +3606,9 @@ p{
       2.5%;
   }
 
-  .md\:h-3{
+  .md\:h-4{
     height:
-      0.75rem;
+      1rem;
   }
 
   .md\:h-\[7\.5\%\]{
@@ -3532,31 +3621,19 @@ p{
       70%;
   }
 
-  .md\:h-\[95\%\]{
-    height:
-      95%;
-  }
-
-  .md\:h-fit{
-    height:
-      -moz-fit-content;
-    height:
-      fit-content;
-  }
-
   .md\:h-full{
     height:
       100%;
   }
 
-  .md\:w-\[12\%\]{
+  .md\:w-\[12\.5\%\]{
     width:
-      12%;
+      12.5%;
   }
 
-  .md\:w-\[95\%\]{
-    width:
-      95%;
+  .md\:grid-cols-3{
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
   }
 
   .md\:flex-row{
@@ -3572,11 +3649,6 @@ p{
   .md\:justify-between{
     justify-content:
       space-between;
-  }
-
-  .md\:overflow-clip{
-    overflow:
-      clip;
   }
 
   .md\:overflow-visible{

@@ -26,17 +26,17 @@
 
 /*Filter button Style*/
 .btn_filterList{
-    @apply  flex justify-between sm:justify-between sm:w-1/4 w-[90%] *:rounded-full  md:*:py-1 md:*:px-3 *:py-2 *:px-4 *:text-xl sm:*:text-sm;
+    @apply  flex justify-between sm:justify-between sm:w-1/4 w-[90%] *:rounded-full  md:*:py-1 md:*:px-3 *:py-1 *:px-3 *:text-xl sm:*:text-sm;
 
 }
 .btn_filterList>*{
-    @apply dark:bg-Neutral700 bg-white
+    @apply dark:bg-Neutral700 bg-white 
 }
 .mod{
     @apply bg-Red700 text-white dark:bg-Red400 dark:text-Neutral900
 }
 .btn_filterList>*:hover{
-    @apply bg-Neutral600;
+    @apply dark:bg-Neutral600 opacity-80;
 }
  #icon_sun{
     @apply dark:hover:bg-Neutral600  hover:bg-Red500 hover:cursor-pointer hover:text-white;
@@ -47,7 +47,7 @@ p{
     @apply md:text-[12px] text-[16px];
 }
 .card{
-    @apply md:w-[95%] md:h-[95%] pb-8 w-full h-[90%] dark:bg-Neutral700 dark:text-Neutral200;
+    @apply  md:h-full  w-full h-[90%] dark:bg-Neutral700 dark:text-Neutral200;
 }
 .card h1{
     @apply md:text-[16px] text-[20px];
