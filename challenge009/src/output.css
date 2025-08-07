@@ -2867,6 +2867,11 @@ button,
       0px;
 }
 
+.pb-4{
+  padding-bottom:
+      1rem;
+}
+
 .pb-8{
   padding-bottom:
       2rem;
@@ -2885,11 +2890,6 @@ button,
 .pt-\[5\%\]{
   padding-top:
       5%;
-}
-
-.pb-4{
-  padding-bottom:
-      1rem;
 }
 
 .text-center{
@@ -3158,13 +3158,13 @@ button,
 @font-face {
   font-family:Noto ;
 
-  src: url('../browser-extensions-manager-ui-main/assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf');
+  src: url('./assets/fonts/static/NotoSans-Regular.ttf');
 }
 
 @font-face{
   font-family: NotoBold;
 
-  src: url('../browser-extensions-manager-ui-main/assets/fonts/static/NotoSans-Bold.ttf');
+  src: url('./assets/fonts/static/NotoSans-Bold.ttf');
 }
 
 *:focus{
@@ -3547,19 +3547,9 @@ p{
 }
 
 @media (min-width: 640px){
-  .sm\:mt-\[1\%\]{
-    margin-top:
-      1%;
-  }
-
   .sm\:mt-\[1\.5\%\]{
     margin-top:
       1.5%;
-  }
-
-  .sm\:mt-\[2\%\]{
-    margin-top:
-      2%;
   }
 
   .sm\:mt-\[2\.5\%\]{

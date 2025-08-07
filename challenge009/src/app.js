@@ -20,8 +20,8 @@ mode_toggle_btn.addEventListener('click', () => {
 
 function change_mode_toggle_icon() {
   document.querySelector('html').classList.contains('dark')
-    ? mode_toggle_btn.src = "../browser-extensions-manager-ui-main/assets/images/icon-sun.svg"
-    :mode_toggle_btn.src = "../browser-extensions-manager-ui-main/assets/images/icon-moon.svg"
+    ? mode_toggle_btn.src = "./assets/images/icon-sun.svg"
+    :mode_toggle_btn.src = "./assets/images/icon-moon.svg"
 
   }
 
