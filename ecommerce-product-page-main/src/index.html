@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./output.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+
+</head>
+<body class=" *:mx-auto">
+  <header class="flex justify-between  py-5 px-4 basis-1/2">
+    <div class="logo_menu *:inline-flex justify-between" aria-label="divison for logo (and button menu on mobile)">
+       <img src="./images/icon-menu.svg"  class=" mr-2" alt="icon-menu">
+       <img src="./images/logo.svg" alt="Logo page">
+    </div>
+    <nav class=" hidden">
+      <ul>
+        <li>
+          <a href="#">Collections</a>
+        </li>
+        <li>
+          <a href="#">Men</a>
+        </li>
+        <li>
+          <a href="#">Women</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+        
+      </ul>
+    </nav>
+    <div aria-label="division for icon-cart and image avatar" class=" flex justify-end *:mx-[10%] *:my-[5%] basis-1/4 *:w-1/4 ">
+      <img src="./images/icon-cart.svg" alt="icon-cart">
+      <img src="./images/image-avatar.png" alt="image avatar">
+    </div>
+  </header>
+
+  <section class=" relative *:mx-auto">
+    <div aria-label="image product section" class=" ">
+        <div class=" relative">
+          <img src="./images/image-product-1.jpg" alt="sneaker image" class=" ">
+        <div class=" w-full flex justify-between absolute -translate-y-1/2  top-1/2  px-[3%] *:bg-white *:py-[4%] *:px-[5%] *:rounded-full">
+          <img src="./images/icon-previous.svg" alt="Previous icon">
+          <img src="./images/icon-next.svg" alt="Next icon">
+        </div>
+        </div>
+        
+        <div  aria-label="set of images" class="hidden">
+          <img src="./images/image-product-1-thumbnail.jpg" alt="product-1-thumbnail">
+          <img src="./images/image-product-2-thumbnail.jpg" alt="product-2-thumbnail">
+          <img src="./images/image-product-3-thumbnail.jpg" alt="product-3-thumbnail">
+          <img src="./images/image-product-4-thumbnail.jpg" alt="product-4-thumbnail">
+        </div>
+    </div>
+    <main class="font-kuma w-11/12 pt-5  text-darkGrayishBlue">
+      <span class="block   tracking-widest  font-extrabold" aria-label="Company signature">SNEAKERS COMPANY</span>
+       <br>
+      <h1 class=" text-3xl text-black font-extrabold">Fall Limited Edition Sneakers</h1>
+        <br>
+      <p>
+        These low-profile sneakers are your perfect casual wear companion. Featuring a   durable rubber outer sole, they’ll withstand everything the weather can offer.
+      </p> <br>
+      <div id="price" class=" flex justify-between items-center " aria-label="price section">
+        <div class="left font-bold  ">
+          <span class=" text-3xl text-black font-extrabold" aria-label="actual Price">$125.00</span>
+          <span class="text-white text-lg  ml-4 rounded-md px-2 py-[2.5%] bg-black"  aria-label="sold percentage" >50%</span>
+        </div>
+        <span aria-label="initial Price before sold" class=" text-xl line-through">$250.00</span>
+      </div> <br>
+      <div aria-label="button section">
+        <div aria-label="product add to cart previsualizer" class="grid grid-cols-3  place-items-center text-center bg-lightGrayishBlue h-[100px] rounded-xl">
+          <img src="./images/icon-minus.svg" class=" w-[5%]" alt="minus">
+          <span aria-label="previsualiser count">0</span>
+          <img src="./images/icon-plus.svg" alt="plus">
+        </div><br>
+        <button type="button" class="bg-orange w-full font-bold py-4 text-black flex justify-center rounded-xl">
+           <img src="./images/icon-cart.svg" alt="cart image">
+           <span class=" ml-2">Add to cart</span> 
+        </button>
+      </div>
+    </main>
+    <br><br>
+  </section>
+
+</body>
+</html>
