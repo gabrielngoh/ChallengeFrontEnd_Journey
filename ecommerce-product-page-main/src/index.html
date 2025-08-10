@@ -10,13 +10,14 @@
 
 </head>
 <body class=" *:mx-auto">
-  <header class="flex justify-between  py-5 px-4 basis-1/2">
-    <div class="logo_menu *:inline-flex justify-between" aria-label="divison for logo (and button menu on mobile)">
-       <img src="./images/icon-menu.svg"  class=" mr-2" alt="icon-menu">
-       <img src="./images/logo.svg" alt="Logo page">
+  <header class="flex relative justify-between items-center py-5 px-4 ">
+    <div class=" *:inline-flex justify-between" aria-label="divison for logo (and button menu on mobile)">
+       <img src="./images/icon-menu.svg"  class="sm:hidden mr-2" alt="icon-menu">
+       <img src="./images/logo.svg" class=" sm:h-[50%]" alt="Logo page">
     </div>
-    <nav class=" hidden">
-      <ul>
+    <nav class="  sm:relative  sm:h-fit sm:p-0 sm:m-0 sm:w-1/3 absolute h-[940px] z-30 left-0 top-0 bg-white w-2/3  p-[7.5%]">
+      <img src="./images/icon-close.svg" class="sm:hidden" alt="icon-close">
+      <ul class="sm:text-darkGrayishBlue sm:mt-0 sm:flex sm:justify-between mt-[30%] w-full h-fit font-semibold  *:my-4">
         <li>
           <a href="#">Collections</a>
         </li>
@@ -35,7 +36,7 @@
         
       </ul>
     </nav>
-    <div aria-label="division for icon-cart and image avatar" class=" flex justify-end *:mx-[10%] *:my-[5%] basis-1/4 *:w-1/4 ">
+    <div aria-label="division for icon-cart and image avatar" class=" flex justify-end *:mx-[10%] *:sm:mx-[5%]  *:my-[5%] sm:w-[100px] basis-1/4 *:w-1/4 *:sm:w-[12%]">
       <img src="./images/icon-cart.svg" alt="icon-cart">
       <img src="./images/image-avatar.png" alt="image avatar">
     </div>
