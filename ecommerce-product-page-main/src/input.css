@@ -60,3 +60,7 @@ outline: 3px solid orange;
    @apply md:hover:outline-orange md:hover:outline-4 transition md:hover:outline;
 
 }
+.set_outline_Orange{
+    @apply  md:outline-orange md:outline-4  md:outline;
+
+}

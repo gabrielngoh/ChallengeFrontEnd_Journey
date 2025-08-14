@@ -26,10 +26,11 @@ large_img.addEventListener('click',()=>{
 })
 /**#### Change image #### */
 let countPrevious = 0
-Array.from(next_previous).forEach( button =>{
+Array.from(next_previous).forEach( button=>{
     button.addEventListener('click', (e)=>{
-
+        
         e.target.id =='Next' ? MoveNextImg() : MovePreviousImg()
+
 
     })
 } 
@@ -39,6 +40,7 @@ Array.from(thumbnail).forEach( (thumb, index) =>{
 
        countPrevious = index;
        large_dialogue.setAttribute('src',url[countPrevious])
+      
 
     })
 } 
@@ -48,14 +50,27 @@ function MoveNextImg(){
     if(countPrevious < (url.length - 1) ){
             countPrevious += 1;
             large_dialogue.setAttribute('src',url[countPrevious])
+
+              if (thumbnail[countPrevious - 1].classList.contains('set_outline_Orange'))
+              {
+                thumbnail[countPrevious - 1].classList.remove('set_outline_Orange')
+              }
+            thumbnail[countPrevious].classList.add('set_outline_Orange')
+
         }
     
 }
 function MovePreviousImg(){
- if(countPrevious>0){
+ if(countPrevious>0)
+    {
             countPrevious -=1;
-            large_dialogue.setAttribute('src',url[countPrevious])  
-          }
+            large_dialogue.setAttribute('src',url[countPrevious])
+             if (thumbnail[countPrevious+1].classList.contains('set_outline_Orange'))
+              {
+                thumbnail[countPrevious+1].classList.remove('set_outline_Orange')
+              }
+            thumbnail[countPrevious].classList.add('set_outline_Orange')
+        }
 }
 
 
@@ -67,6 +82,7 @@ close_icon.addEventListener('click',()=>{
 })
 
 function showCarroussel (){
+    thumbnail[0].classList.add('set_outline_Orange')
     dialog.showModal();
 }
 // - Switch the large product image by clicking on the small thumbnail images(in progress)

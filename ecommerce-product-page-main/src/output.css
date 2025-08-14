@@ -1363,6 +1363,14 @@ video {
   outline-width: 8px;
 }
 
+.outline-4 {
+  outline-width: 4px;
+}
+
+.outline-orange {
+  outline-color: hsl(26,100%,55%);
+}
+
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -1470,6 +1478,12 @@ outline: 3px solid orange;
 
 @media (min-width: 768px) {
   #product-thumbnail>*:hover {
+    outline-style: solid;
+    outline-width: 4px;
+    outline-color: hsl(26,100%,55%);
+  }
+
+  .set_outline_Orange {
     outline-style: solid;
     outline-width: 4px;
     outline-color: hsl(26,100%,55%);
@@ -1749,6 +1763,18 @@ outline: 3px solid orange;
     --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .md\:outline {
+    outline-style: solid;
+  }
+
+  .md\:outline-4 {
+    outline-width: 4px;
+  }
+
+  .md\:outline-orange {
+    outline-color: hsl(26,100%,55%);
   }
 
   .md\:hover\:outline:hover {
