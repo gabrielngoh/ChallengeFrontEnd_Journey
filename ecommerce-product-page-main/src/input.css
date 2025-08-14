@@ -5,3 +5,58 @@
     font-family: kumbsans;
     src: url(./fonts/KumbhSans-VariableFont_YOPQ\,wght.woff);
 }
+body>*:not(dialog){
+    width:75%;
+    
+}
+a{
+    @apply hover:text-black transition-colors  ;
+}
+
+li{
+    position: relative;
+    height: 100%;
+    display: block;
+}
+
+a:hover::before{
+    content: "";
+    height: .25rem;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    z-index: 30;
+    bottom: 0;
+    transform: translateY(2.5rem);
+    
+}
+img,button{
+    cursor: pointer;
+    transition: background 150ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+button:hover{
+    @apply bg-opacity-90 ;
+}
+#product-thumbnail img:hover{
+    opacity: .5;
+}
+/* Au clic des thumbnails:
+ .clicked{
+outline: 3px solid orange;
+ }
+*/
+
+.basket header{
+     border-bottom: .25px solid gray;
+}
+.basket main{
+    margin-inline: auto;
+}
+.basket span{
+    @apply block;
+   
+}
+#product-thumbnail>*{
+   @apply md:hover:outline-orange md:hover:outline-4 transition md:hover:outline;
+
+}

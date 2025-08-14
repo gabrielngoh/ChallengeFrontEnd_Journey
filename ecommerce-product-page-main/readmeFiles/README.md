@@ -18,10 +18,10 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 Your users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Open a lightbox gallery by clicking on the large product image
-- Switch the large product image by clicking on the small thumbnail images
+- View the optimal layout for the site depending on their device's screen size (done)
+- See hover states for all interactive elements on the page(done)
+- Open a lightbox gallery by clicking on the large product image(in progress)
+- Switch the large product image by clicking on the small thumbnail images(in progress)
 - Add items to the cart
 - View the cart and remove items from it
 
