@@ -9,7 +9,7 @@
   <title>Frontend Mentor | E-commerce product page</title>
 
 </head>
-<body class="relative *:mx-auto sm:h-screen ">
+<body class="relative  *:mx-auto sm:h-screen ">
   <header class="flex relative justify-between  sm:mb-[5%] sm:border-b-[1px] sm:border-b-darkGrayishBlue items-center py-5 px-4 ">
     <div class=" *:inline-flex justify-between" aria-label="divison for logo (and button menu on mobile)">
        <img src="./images/icon-menu.svg"  class="sm:hidden mr-2" alt="icon-menu">
@@ -76,18 +76,18 @@
       </div> <br>
       <div aria-label="button section" class=" sm:flex sm:gap-1">
         <div aria-label="product add to cart previsualizer" class="grid grid-cols-3  place-items-center text-center bg-lightGrayishBlue h-fit py-5 sm:h-[4rem] sm:w-[47.5%] rounded-xl">
-          <img src="./images/icon-minus.svg" class=" sm:w-auto" alt="minus">
-          <span aria-label="previsualiser count">0</span>
-          <img src="./images/icon-plus.svg" alt="plus">
+          <img  id="minus" src="./images/icon-minus.svg" class=" sm:w-auto" alt="minus">
+          <span id="priceScreen" aria-label="previsualiser count">0</span>
+          <img id="plus" src="./images/icon-plus.svg" alt="plus">
         </div><br>
-        <button type="button" class="bg-orange w-full font-bold py-4 text-black flex justify-center rounded-xl">
+        <button type="button" id="addTocart" class="bg-orange w-full font-bold py-4 text-black flex justify-center rounded-xl">
            <img src="./images/icon-cart.svg" class="   md:h-[1.25rem]  md:max-w-8" alt="cart image">
            <span class="sm:ml-4 ml-2">Add to cart</span> 
         </button>
       </div>
     </main>
     <br><br>
-    <div class="bucket_previsualiser basket absolute top-3 md:right-0 md:mx-0  rounded-md md:top-0 w-[95%]  bg-white max-w-[320px] flex flex-col md:rounded-md md:shadow-2xl">
+    <div class="bucket_previsualiser hidden basket absolute top-3 md:right-0 md:mx-0  rounded-md md:top-0 w-[95%]  bg-white max-w-[320px]  flex-col md:rounded-md md:shadow-2xl">
       <header>
         <span class=" font-bold ml-2 my-4">Cart</span>
       </header>
@@ -97,8 +97,8 @@
           <span class=" text-darkGrayishBlue ">Fall Limited Edition Sneakers</span>
           <div class="flex  *:ml-2 ">
             <span>&dollar;125.00</span>
-            <span>*&Tab;0</span>
-            <span class=" font-bold">&dollar;0</span>
+            <span id="qtyPrev">*&Tab;0</span>
+            <span id="pricePrev" class=" font-bold">&dollar;0</span>
           </div>
         </div>
         <img src="./images/icon-delete.svg" class="h-4" alt="icon-delete">

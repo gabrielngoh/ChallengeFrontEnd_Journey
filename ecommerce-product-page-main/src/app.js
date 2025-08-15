@@ -35,16 +35,7 @@ Array.from(next_previous).forEach( button=>{
     })
 } 
 )
-Array.from(thumbnail).forEach( (thumb, index) =>{
-    thumb.addEventListener('click', ()=>{
 
-       countPrevious = index;
-       large_dialogue.setAttribute('src',url[countPrevious])
-      
-
-    })
-} 
-)
 
 function MoveNextImg(){
     if(countPrevious < (url.length - 1) ){
@@ -86,10 +77,53 @@ function showCarroussel (){
     dialog.showModal();
 }
 // - Switch the large product image by clicking on the small thumbnail images(in progress)
-/**
- * Select thumbnail 
- * add click event 
- * change large product image
- */
-// - Add items to the cart
-// - View the cart and remove items from it
+
+Array.from(thumbnail).forEach( (thumb, index) =>{
+    thumb.addEventListener('click', ()=>{
+
+       countPrevious = index;
+       large_dialogue.setAttribute('src',url[countPrevious])
+      
+
+    })
+} 
+)
+
+//  Add items to the cart
+
+const plusMinusIconsArray = document.querySelectorAll('#plus,#minus')
+const priceScreen = document.querySelector('#priceScreen')
+const totalPriceBucket = document.querySelector('#pricePrev')
+const totalProductBucket = document.querySelector('#qtyPrev')
+const bucket = document.querySelector('.bucket_previsualiser')
+const addToChartBtn = document.querySelector('#addTocart')
+addToChartBtn.addEventListener('click', ()=>{
+    bucket.style.display= 'flex'
+})
+
+plusMinusIconsArray.forEach(
+    (btn)=>{
+    btn.addEventListener('click',(e)=>
+        {
+        e.target.id == 'plus' ? increment_Prod_Qte():decrement_Prod_Qte()
+    })
+})
+
+function increment_Prod_Qte (){
+ if(parseInt(priceScreen.textContent)>=0){
+    priceScreen.textContent=parseInt(priceScreen.textContent) + 1
+    totalProductBucket.textContent=priceScreen.textContent
+    totalPriceBucket.textContent=parseFloat(totalProductBucket.textContent) * 125.00 
+ }    
+}
+function decrement_Prod_Qte (){
+ if (parseInt(priceScreen.textContent)>0){
+    priceScreen.textContent=parseInt(priceScreen.textContent) - 1
+    totalProductBucket.textContent=priceScreen.textContent
+    totalPriceBucket.textContent=parseFloat(totalProductBucket.textContent) * 125.00 
+ }
+}
+
+// Afficher le bucket vide lorsque la quantite est de 0 
+// Afficher le nombre de produit dans le bucket icon du head 
+// Supprimer un element dans le bucket avec dustbin icon

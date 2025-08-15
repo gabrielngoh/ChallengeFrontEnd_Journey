@@ -1359,12 +1359,12 @@ video {
   outline-style: solid;
 }
 
-.outline-8 {
-  outline-width: 8px;
-}
-
 .outline-4 {
   outline-width: 4px;
+}
+
+.outline-8 {
+  outline-width: 8px;
 }
 
 .outline-orange {
@@ -1405,8 +1405,10 @@ video {
   src: url(./fonts/KumbhSans-VariableFont_YOPQ\,wght.woff);
 }
 
-body>*:not(dialog){
-  width:75%;
+@media (min-width: 768px) {
+  body>*:not(dialog) {
+    width: 75%;
+  }
 }
 
 a {
@@ -1749,6 +1751,10 @@ outline: 3px solid orange;
 
   .md\:h-\[1\.25rem\] {
     height: 1.25rem;
+  }
+
+  .md\:w-\[75\%\] {
+    width: 75%;
   }
 
   .md\:max-w-8 {

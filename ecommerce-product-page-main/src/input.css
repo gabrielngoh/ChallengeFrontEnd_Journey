@@ -6,7 +6,7 @@
     src: url(./fonts/KumbhSans-VariableFont_YOPQ\,wght.woff);
 }
 body>*:not(dialog){
-    width:75%;
+    @apply md:w-[75%];
     
 }
 a{
