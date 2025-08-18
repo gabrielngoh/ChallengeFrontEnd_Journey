@@ -97,8 +97,12 @@ const totalPriceBucket = document.querySelector('#pricePrev')
 const totalProductBucket = document.querySelector('#qtyPrev')
 const bucket = document.querySelector('.bucket_previsualiser')
 const addToChartBtn = document.querySelector('#addTocart')
+const bucketQteHead = document.querySelector('#etiquette_style')
+
 addToChartBtn.addEventListener('click', ()=>{
-    bucket.style.display= 'flex'
+      // parseInt(priceScreen) > 0 ? bucket.style.display= 'flex' : emptYState()
+        bucket.style.display= 'flex'
+        chartModifier()
 })
 
 plusMinusIconsArray.forEach(
@@ -110,10 +114,13 @@ plusMinusIconsArray.forEach(
 })
 
 function increment_Prod_Qte (){
+
  if(parseInt(priceScreen.textContent)>=0){
     priceScreen.textContent=parseInt(priceScreen.textContent) + 1
     totalProductBucket.textContent=priceScreen.textContent
     totalPriceBucket.textContent=parseFloat(totalProductBucket.textContent) * 125.00 
+    bucketQteHead.textContent=priceScreen.textContent
+
  }    
 }
 function decrement_Prod_Qte (){
@@ -121,9 +128,32 @@ function decrement_Prod_Qte (){
     priceScreen.textContent=parseInt(priceScreen.textContent) - 1
     totalProductBucket.textContent=priceScreen.textContent
     totalPriceBucket.textContent=parseFloat(totalProductBucket.textContent) * 125.00 
+    bucketQteHead.textContent=priceScreen.textContent
  }
 }
 
 // Afficher le bucket vide lorsque la quantite est de 0 
 // Afficher le nombre de produit dans le bucket icon du head 
 // Supprimer un element dans le bucket avec dustbin icon
+const bucketMain = document.querySelector('.basket')
+const icon_delete = document.querySelector('#icon_delete')
+icon_delete.addEventListener('click',()=>{
+    emptYState()
+    priceScreen.textContent = 0;
+})
+function emptYState(){
+bucketMain.innerHTML=
+    `<header>
+        <span class=" font-bold ml-2 my-4">Cart</span>
+     </header>
+    <main class = "h-full flex justify-center items-center">
+        <span class =" text-darkGrayishBlue font-bold">Your cart is empty</span>
+    </main>`;
+        bucketQteHead.style.display='none'  
+
+}
+
+function chartModifier(){
+
+    bucketQteHead.style.display='block'  
+}

@@ -64,3 +64,7 @@ outline: 3px solid orange;
     @apply  md:outline-orange md:outline-4  md:outline;
 
 }
+#etiquette_style{
+    @apply hidden absolute bg-orange text-white sm:px-1 py-0 rounded-full right-0 top-0 text-[10px] text-center w-1/2 ;
+
+}

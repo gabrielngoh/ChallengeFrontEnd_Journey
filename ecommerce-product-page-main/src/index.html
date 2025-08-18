@@ -37,7 +37,10 @@
       </ul>
     </nav>
     <div aria-label="division for icon-cart and image avatar" class=" flex justify-end *:mx-[10%] *:sm:mx-[5%]  *:my-[5%] sm:w-[100px] basis-1/4 *:w-1/4 *:sm:w-[12%]">
-      <img src="./images/icon-cart.svg" alt="icon-cart">
+      <div class="panier relative">
+         <span id="etiquette_style">0</span>
+         <img src="./images/icon-cart.svg" class="w-full h-full object-contain" id="icon-cart" alt="icon-cart">
+      </div>
       <img src="./images/image-avatar.png" class="md:hover:outline-orange md:hover:outline-4 transition md:hover:outline rounded-full" alt="image avatar">
     </div>
   </header>
@@ -87,7 +90,7 @@
       </div>
     </main>
     <br><br>
-    <div class="bucket_previsualiser hidden basket absolute top-3 md:right-0 md:mx-0  rounded-md md:top-0 w-[95%]  bg-white max-w-[320px]  flex-col md:rounded-md md:shadow-2xl">
+    <div class="bucket_previsualiser h-[200px] hidden basket absolute top-3 md:right-0 md:mx-0  rounded-md md:top-0 w-[95%]  bg-white max-w-[320px]  flex-col md:rounded-md md:shadow-2xl">
       <header>
         <span class=" font-bold ml-2 my-4">Cart</span>
       </header>
@@ -101,7 +104,7 @@
             <span id="pricePrev" class=" font-bold">&dollar;0</span>
           </div>
         </div>
-        <img src="./images/icon-delete.svg" class="h-4" alt="icon-delete">
+        <img id="icon_delete" src="./images/icon-delete.svg" class="h-4" alt="icon-delete">
        </main>
         <button type="button" class="mx-auto bg-orange block rounded-md w-11/12 mt-3  font-semibold mb-8 py-3">Checkout</button>
     </div>
