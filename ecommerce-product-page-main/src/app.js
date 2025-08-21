@@ -18,8 +18,17 @@ const large_img = document.querySelector('#large_image')
 const large_dialogue= document.querySelector('#large_IMG')
 const next_previous = document.querySelectorAll('#prev, #Next')
 const thumbnail = document.querySelectorAll('dialog #product-thumbnail img')
-console.log(thumbnail)
+const nav = document.querySelector('nav')
+const hamburger = document.querySelector('#hamburger')
+const closeHam = document.querySelector('#close_menu')
 
+
+hamburger.addEventListener('click',()=>{
+    nav.style.display='block'
+})
+closeHam.addEventListener('click',()=>{
+    nav.style.display='none'
+})
 /**#### Display Caroussel */
 large_img.addEventListener('click',()=>{
     showCarroussel()
@@ -154,6 +163,5 @@ bucketMain.innerHTML=
 }
 
 function chartModifier(){
-
-    bucketQteHead.style.display='block'  
+    bucketQteHead.style.display='block';
 }
