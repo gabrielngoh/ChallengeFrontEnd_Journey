@@ -1,12 +1,4 @@
-// - Open a lightbox gallery by clicking on the large product image(done)
-/**
- * Select large product image done
- * Add click event done
- * show caroussel done
- * select previous and next image done
- * add click event to switch button done
- * 
- */
+
 const url = [
     './images/image-product-1.jpg',
     './images/image-product-2.jpg',
@@ -17,6 +9,7 @@ const body = document.querySelector('body')
 const large_img = document.querySelector('#large_image')
 const large_dialogue= document.querySelector('#large_IMG')
 const next_previous = document.querySelectorAll('#prev, #Next')
+const next_previousLargeImg = document.querySelectorAll('#prevsec,#Nextsec')
 const thumbnail = document.querySelectorAll('dialog #product-thumbnail img')
 const nav = document.querySelector('nav')
 const hamburger = document.querySelector('#hamburger')
@@ -26,10 +19,13 @@ const closeHam = document.querySelector('#close_menu')
 hamburger.addEventListener('click',()=>{
     nav.style.display='block'
 })
+
 closeHam.addEventListener('click',()=>{
     nav.style.display='none'
 })
+
 /**#### Display Caroussel */
+
 large_img.addEventListener('click',()=>{
     showCarroussel()
 })
@@ -44,8 +40,31 @@ Array.from(next_previous).forEach( button=>{
     })
 } 
 )
+Array.from(next_previousLargeImg).forEach( button=>{
+    button.addEventListener('click', (e)=>{
+        
+        e.target.id =='Nextsec' ? MoveNextLargeImg() : MovePreviousLargeImg()
 
 
+    })
+} 
+)
+let countPreviousLargeImg = 0
+function MoveNextLargeImg(){
+    if(countPreviousLargeImg < (url.length - 1) ){
+            countPreviousLargeImg += 1;
+            large_img.setAttribute('src',url[countPreviousLargeImg])
+
+        }
+}
+function MovePreviousLargeImg(){
+ if(countPreviousLargeImg>0)
+    {
+            countPreviousLargeImg -=1;
+            large_img.setAttribute('src',url[countPreviousLargeImg])
+             
+    }
+}
 function MoveNextImg(){
     if(countPrevious < (url.length - 1) ){
             countPrevious += 1;
